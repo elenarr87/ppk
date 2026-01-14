@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com">
+
     <!-- Primary Meta Tags -->
     <title>🚨 Пътна Помощ Костинброд 24/7 ⚡ Калкулатор Цена | 0877 845 569</title>
     <meta name="description" content="⭐ Денонощна пътна помощ Костинброд с бърза реакция 30-40 мин и онлайн калкулатор за точна цена. Превоз на до 6 пътници, POS плащане. Обслужваме Божурище, Сливница, Драгоман, Калотина, Гинци и Е80.">
@@ -14,15 +16,16 @@
     <meta name="bingbot" content="index, follow">
     <meta name="author" content="Транспортер Иван Иванов ЕООД">
     <meta name="theme-color" content="#FF7A00">
-    <!-- Canonical -->
+
+    <!-- Canonical & Hreflang -->
     <link rel="canonical" href="https://patna-pomosht-kostinbrod.bg/kostinbrod.html">
-    <!-- Hreflang -->
     <link rel="alternate" hreflang="bg" href="https://patna-pomosht-kostinbrod.bg/kostinbrod.html">
     <link rel="alternate" hreflang="en" href="https://patna-pomosht-kostinbrod.bg/english.html">
     <link rel="alternate" hreflang="de" href="https://patna-pomosht-kostinbrod.bg/german.html">
     <link rel="alternate" hreflang="tr" href="https://patna-pomosht-kostinbrod.bg/turk.html">
     <link rel="alternate" hreflang="ro" href="https://patna-pomosht-kostinbrod.bg/rom.html">
     <link rel="alternate" hreflang="x-default" href="https://patna-pomosht-kostinbrod.bg/kostinbrod.html">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://patna-pomosht-kostinbrod.bg/kostinbrod.html">
@@ -34,304 +37,38 @@
     <meta property="og:image:alt" content="Репатрак Костинброд - професионална пътна помощ">
     <meta property="og:locale" content="bg_BG">
     <meta property="og:site_name" content="Пътна Помощ Костинброд 24/7">
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Пътна Помощ Костинброд 24/7 – Калкулатор Цена">
     <meta name="twitter:description" content="Единствената пътна помощ с онлайн калкулатор в Костинброд и региона!">
     <meta name="twitter:image" content="https://patna-pomosht-kostinbrod.bg/images/memi2.jpg">
     <meta name="twitter:image:alt" content="Пътна помощ Костинброд">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
     <!-- Performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
     <link rel="preload" href="/images/memi2.jpg" as="image">
+
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="style.css" as="style">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <style>
-        :root {
-            --primary: #FF7A00;
-            --primary-dark: #E55A2B;
-            --secondary: #28a745;
-            --dark: #1A1A2E;
-            --text: #2d3748;
-            --muted: #5a5a5a;
-            --light: #fff5f0;
-            --radius: 12px;
-            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
-            --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
-            --shadow-lg: 0 12px 40px rgba(255,122,0,0.2);
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
-            color: var(--text);
-            line-height: 1.6;
-            padding-bottom: 80px;
-        }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                transition-duration: 0.01ms !important;
-            }
-        }
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: var(--primary);
-            color: white;
-            padding: 8px 12px;
-            border-radius: var(--radius);
-            z-index: 10000;
-            transition: top var(--transition);
-        }
-        .skip-link:focus { top: 6px; }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: var(--shadow-md);
-        }
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 800;
-        }
-        .header-cta {
-            background: var(--secondary);
-            color: white;
-            padding: 10px 16px;
-            border-radius: var(--radius);
-            text-decoration: none;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 44px;
-        }
-        .header-cta:hover { background: #218838; transform: translateY(-3px); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        .language-selector {
-            text-align: center;
-            padding: 10px 0;
-            background: var(--dark);
-            margin-bottom: 20px;
-        }
-        .language-selector button {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            margin: 0 5px;
-            width: 36px;
-            height: 36px;
-            transition: var(--transition);
-            min-width: 44px;
-            min-height: 44px;
-        }
-        .language-selector button:hover { transform: scale(1.1); }
-        .hero {
-            background: linear-gradient(135deg, #e6ffe6, #c8e6c9);
-            border: 3px solid var(--secondary);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-        }
-        .hero h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 15px 30px;
-            border-radius: var(--radius);
-            font-weight: 800;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0.5rem;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            min-height: 48px;
-        }
-        .btn-primary:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        section {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem 0;
-            box-shadow: var(--shadow-md);
-        }
-        section h2 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary);
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-        .service-list { list-style: none; padding: 0; }
-        .service-list li {
-            padding: 1rem;
-            border-left: 4px solid var(--primary);
-            margin-bottom: 1rem;
-            border-radius: var(--radius);
-            background: var(--light);
-            transition: var(--transition);
-        }
-        .service-list li:hover { transform: translateX(10px); background: white; }
-        .area-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 1rem;
-        }
-        .area-card {
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #fff5f0, #ffe8dc);
-            border: 2px solid var(--primary);
-            border-radius: var(--radius);
-            text-align: center;
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 700;
-            transition: var(--transition);
-            min-height: 44px;
-        }
-        .area-card:hover {
-            transform: scale(1.08) translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-        .prices-info {
-            background: linear-gradient(135deg, #fff3e6, #fff0de);
-            border-left: 6px solid var(--primary-dark);
-            padding: 1.5rem;
-            border-radius: var(--radius);
-            margin: 2rem 0;
-        }
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-        .image-gallery img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow-sm);
-            transition: var(--transition);
-        }
-        .image-gallery img:hover { transform: scale(1.05); }
-        .sticky-cta {
-            position: fixed;
-            bottom: 1rem;
-            left: 1rem;
-            right: 1rem;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            z-index: 999;
-        }
-        .sticky-cta a {
-            flex: 1;
-            max-width: 220px;
-            background: var(--primary);
-            color: white;
-            padding: 12px;
-            border-radius: var(--radius);
-            font-weight: 800;
-            text-decoration: none;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            min-height: 48px;
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 2rem 1rem;
-            margin-top: 3rem;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto 2rem;
-        }
-        footer h3 { color: var(--primary); margin-bottom: 1rem; }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; transition: var(--transition); }
-        footer a:hover { color: var(--primary); }
-        .partners-grid {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-            padding: 0;
-        }
-        .partner-link {
-            padding: 1rem;
-            background: var(--light);
-            border-radius: var(--radius);
-            text-align: center;
-            color: var(--text);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        .partner-link:hover {
-            background: white;
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-md);
-        }
-        .final-cta {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            text-align: center;
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin: 2rem 0;
-        }
-        .final-cta h2 { color: white; margin-bottom: 1rem; }
-        .final-cta .btn-primary { background: white; color: var(--primary); }
-        @media (max-width: 768px) {
-            .header-container { flex-direction: column; text-align: center; }
-            .sticky-cta { flex-direction: column; }
-            .sticky-cta a { max-width: 100%; }
-        }
-        @media print {
-            header, .sticky-cta, .language-selector, footer, .skip-link { display: none; }
-            body { background: white; color: black; }
-            section { box-shadow: none; border: 1px solid #ddd; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN9QE79LPZ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -339,6 +76,7 @@
         gtag('js', new Date());
         gtag('config', 'G-WN9QE79LPZ', { anonymize_ip: true });
     </script>
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -426,50 +164,54 @@
     <header>
         <div class="header-container">
             <h1>Денонощна Пътна Помощ Костинброд 24/7</h1>
-            <a href="tel:+359877845569" class="header-cta">
-                <i class="fas fa-phone-alt"></i> Обади се!
+            <a href="tel:+359877845569" class="header-cta" aria-label="Обади се на 0877 845 569">
+                <i class="fas fa-phone-alt" aria-hidden="true"></i> Обади се!
             </a>
         </div>
     </header>
+
     <div class="language-selector" role="navigation" aria-label="Избор на език">
         <button data-lang="bg" class="lang-btn" aria-label="Превключи на български език">
-            <img src="images/Bulgaria.png" alt="" aria-hidden="true" width="36" height="36">
+            <img src="images/Bulgaria.png" alt="" aria-hidden="true" width="36" height="36" loading="lazy">
         </button>
         <button data-lang="en" class="lang-btn" aria-label="Switch to English">
-            <img src="images/en_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
+            <img src="images/en_flag_icon.png" alt="" aria-hidden="true" width="36" height="36" loading="lazy">
         </button>
         <button data-lang="de" class="lang-btn" aria-label="Zu Deutsch wechseln">
-            <img src="images/de_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
+            <img src="images/de_flag_icon.png" alt="" aria-hidden="true" width="36" height="36" loading="lazy">
         </button>
         <button data-lang="tr" class="lang-btn" aria-label="Türkçe'ye geç">
-            <img src="images/tr_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
+            <img src="images/tr_flag_icon.png" alt="" aria-hidden="true" width="36" height="36" loading="lazy">
         </button>
         <button data-lang="ro" class="lang-btn" aria-label="Treceți la română">
-            <img src="images/ro_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
+            <img src="images/ro_flag_icon.png" alt="" aria-hidden="true" width="36" height="36" loading="lazy">
         </button>
     </div>
+
     <main id="main-content" class="container">
         <section class="hero">
             <h2>Най-бързата Пътна Помощ в Костинброд</h2>
-            <p style="font-size:1.1rem;margin-bottom:1rem">Денонощна помощ 24/7 с реакция 30–40 минути. Единствената в региона с <strong>онлайн калкулатор за точна цена</strong>!</p>
-            <p style="font-weight:700;margin-bottom:1.5rem">Превоз на до 6 пътници, POS плащане, професионално оборудване.</p>
-            <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
-                <a href="tel:+359877845569" class="btn-primary"><i class="fas fa-phone"></i> ПОЗВЪНЕТЕ СЕГА</a>
-                <a href="/kalkulator.html" class="btn-primary" style="background:linear-gradient(135deg,#0b84ff,#084caa)"><i class="fas fa-calculator"></i> ИЗЧИСЛИ ЦЕНАТА</a>
-                <button class="btn-primary" onclick="sendLocation()" style="background:linear-gradient(135deg,#28a745,#218838)"><i class="fas fa-map-marker-alt"></i> ИЗПРАТИ ЛОКАЦИЯ</button>
+            <p class="hero-text">Денонощна помощ 24/7 с реакция 30–40 минути. Единствената в региона с <strong>онлайн калкулатор за точна цена</strong>!</p>
+            <p class="hero-subtitle">Превоз на до 6 пътници, POS плащане, професионално оборудване.</p>
+            <div class="hero-buttons">
+                <a href="tel:+359877845569" class="btn-primary"><i class="fas fa-phone" aria-hidden="true"></i> ПОЗВЪНЕТЕ СЕГА</a>
+                <a href="/kalkulator.html" class="btn-primary btn-calculator"><i class="fas fa-calculator" aria-hidden="true"></i> ИЗЧИСЛИ ЦЕНАТА</a>
+                <button class="btn-primary btn-location" onclick="sendLocation()"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ИЗПРАТИ ЛОКАЦИЯ</button>
             </div>
-            <p style="margin-top:1.5rem;font-weight:700;color:var(--primary)">Доверете се на 5.0⭐ Google рейтинг с 75 отзива!</p>
+            <p class="hero-trust">Доверете се на 5.0⭐ Google рейтинг с 75 отзива!</p>
         </section>
+
         <section>
-            <h2><i class="fas fa-images"></i> Нашият Автопарк и Оборудване</h2>
-            <p style="text-align:center;color:var(--muted);margin-bottom:1rem">Професионално оборудване и опитен екип за всеки тип МПС</p>
+            <h2><i class="fas fa-images" aria-hidden="true"></i> Нашият Автопарк и Оборудване</h2>
+            <p class="section-subtitle">Професионално оборудване и опитен екип за всеки тип МПС</p>
             <div class="image-gallery">
-                <img src="images/memi16.jpg" alt="Репатрак Костинброд - професионално теглене на автомобил" loading="lazy" width="400" height="300">
-                <img src="images/memi18.jpg" alt="Пътна помощ Костинброд - автомобил на платформа" loading="lazy" width="400" height="300">
-                <img src="images/memi21.jpg" alt="Извличане на заседнал автомобил в Костинброд" loading="lazy" width="400" height="300">
-                <img src="images/memi17.jpg" alt="Транспортиране на бус в Костинброд" loading="lazy" width="400" height="300">
+                <img src="images/memi16.jpg" alt="Репатрак Костинброд - професионално теглене на автомобил" loading="lazy" decoding="async" fetchpriority="high" width="400" height="300">
+                <img src="images/memi18.jpg" alt="Пътна помощ Костинброд - автомобил на платформа" loading="lazy" decoding="async" width="400" height="300">
+                <img src="images/memi21.jpg" alt="Извличане на заседнал автомобил в Костинброд" loading="lazy" decoding="async" width="400" height="300">
+                <img src="images/memi17.jpg" alt="Транспортиране на бус в Костинброд" loading="lazy" decoding="async" width="400" height="300">
             </div>
         </section>
+
         <section>
             <h2>Защо да изберете нас в Костинброд?</h2>
             <ul class="service-list">
@@ -480,10 +222,11 @@
                 <li>Пълно покритие на региона</li>
             </ul>
         </section>
+
         <div class="prices-info">
             <h3>Прозрачни цени</h3>
             <p>Изчислете точната цена с нашия калкулатор:</p>
-            <div style="text-align:center;margin:1rem 0">
+            <div class="prices-cta">
                 <a href="/kalkulator.html" class="btn-primary">КЪМ КАЛКУЛАТОРА</a>
             </div>
             <ul>
@@ -493,6 +236,7 @@
                 <li>Нощна такса (22:00–07:00): +30%</li>
             </ul>
         </div>
+
         <section>
             <h2>Обслужвани райони</h2>
             <div class="area-grid">
@@ -507,45 +251,49 @@
                 <a href="/magistralaevropa.html" class="area-card">Магистрала Е80</a>
             </div>
         </section>
+
         <section aria-labelledby="partners-title">
-            <h2 id="partners-title"><i class="fas fa-handshake"></i> Наши партньори</h2>
-            <p style="text-align:center;color:var(--muted);margin-bottom:16px">Сътрудничим с водещи компании за по-добро обслужване.</p>
+            <h2 id="partners-title"><i class="fas fa-handshake" aria-hidden="true"></i> Наши партньори</h2>
+            <p class="section-subtitle">Сътрудничим с водещи компании за по-добро обслужване.</p>
             <ul class="partners-grid">
                 <li>
                     <a href="https://www.autolaboratory.com" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        <i class="fas fa-external-link-alt"></i> Auto Laboratory
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Auto Laboratory
                     </a>
                 </li>
                 <li>
                     <a href="https://xdrivebg.com" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        <i class="fas fa-external-link-alt"></i> XDrive BG
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> XDrive BG
                     </a>
                 </li>
                 <li>
                     <a href="https://www.facebook.com/nikoautogas/?locale=bg_BG" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        <i class="fas fa-external-link-alt"></i> Niko Autogas
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Niko Autogas
                     </a>
                 </li>
             </ul>
         </section>
+
         <section class="final-cta">
             <h2>Нуждаете се от помощ СЕГА?</h2>
             <p>Обадете се веднага – пристигаме бързо!</p>
             <a href="tel:+359877845569" class="btn-primary">0877 845 569</a>
         </section>
     </main>
+
     <div class="sticky-cta">
-        <a href="tel:+359877845569"><i class="fas fa-phone"></i> ОБАДИ СЕ</a>
-        <a href="#" onclick="sendLocation();return false"><i class="fas fa-map-marker-alt"></i> ИЗПРАТИ ЛОКАЦИЯ</a>
+        <a href="tel:+359877845569" aria-label="Обади се на 0877 845 569"><i class="fas fa-phone" aria-hidden="true"></i> ОБАДИ СЕ</a>
+        <a href="#" class="btn-location-sticky" onclick="sendLocation();return false" aria-label="Изпрати локация"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ИЗПРАТИ ЛОКАЦИЯ</a>
     </div>
+
     <footer>
         <div class="footer-grid">
             <div>
                 <h3>Контакти</h3>
-                <p><i class="fas fa-building"></i> "Транспортер Иван Иванов" ЕООД</p>
-                <p><i class="fas fa-map-marker-alt"></i> ул. Бяло море 16, Костинброд 2230</p>
-                <p><i class="fas fa-phone"></i> <a href="tel:+359877845569">+359 877 845 569</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:lind_2003@abv.bg">lind_2003@abv.bg</a></p>
+                <p><i class="fas fa-building" aria-hidden="true"></i> "Транспортер Иван Иванов" ЕООД</p>
+                <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> ул. Бяло море 16, Костинброд 2230</p>
+                <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+359877845569">+359 877 845 569</a></p>
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:lind_2003@abv.bg">lind_2003@abv.bg</a></p>
             </div>
             <div>
                 <h3>Бързи връзки</h3>
@@ -555,57 +303,31 @@
             </div>
             <div>
                 <h3>Работно време</h3>
-                <p style="font-size:1.2rem;font-weight:700;color:var(--primary)">ДЕНОНОЩНО 24/7</p>
-                <p style="margin-top:1rem">Понеделник - Неделя: 00:00 - 23:59</p>
-                <p style="margin-top:1rem;font-weight:600">Удостоверение №42-00048/28.01.2021</p>
+                <p class="footer-hours">ДЕНОНОЩНО 24/7</p>
+                <p class="footer-note">Понеделник - Неделя: 00:00 - 23:59</p>
+                <p class="footer-certificate">Удостоверение №42-00048/28.01.2021</p>
             </div>
         </div>
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;text-align:center">
-            <p style="margin-bottom:1rem;color:white;">Следвайте ни:</p>
-            <div style="display:flex;gap:20px;justify-content:center;margin-bottom:1.5rem;flex-wrap:wrap;">
-                <a href="https://www.facebook.com/patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="Facebook" style="color:white;font-size:2rem">
-                    <i class="fab fa-facebook-f"></i>
+        <div class="footer-social">
+            <p class="footer-social-title">Следвайте ни:</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="Facebook">
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
                 </a>
-                <a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener" aria-label="Google Business" style="color:white;font-size:2rem">
-                    <i class="fab fa-google"></i>
+                <a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener" aria-label="Google Business">
+                    <i class="fab fa-google" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/road_assistance_/" target="_blank" rel="noopener" aria-label="Instagram" style="color:white;font-size:2rem">
-                    <i class="fab fa-instagram"></i>
+                <a href="https://www.instagram.com/road_assistance_/" target="_blank" rel="noopener" aria-label="Instagram">
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.tiktok.com/@patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="TikTok" style="color:white;font-size:2rem">
-                    <i class="fab fa-tiktok"></i>
+                <a href="https://www.tiktok.com/@patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="TikTok">
+                    <i class="fab fa-tiktok" aria-hidden="true"></i>
                 </a>
             </div>
-            <p style="font-size:0.9rem;color:rgba(255,255,255,0.7)">© 2021 - 2025 Всички права запазени. "Транспортер Иван Иванов" ЕООД.</p>
+            <p class="footer-copyright">© 2021 - 2025 Всички права запазени. "Транспортер Иван Иванов" ЕООД.</p>
         </div>
     </footer>
-    <script>
-        function sendLocation() {
-            if (!navigator.geolocation) {
-                alert("Моля позвънете директно на: 0877 845 569");
-                return;
-            }
-            navigator.geolocation.getCurrentPosition(function(pos) {
-                const lat = pos.coords.latitude;
-                const lng = pos.coords.longitude;
-                const message = `Здравейте! Нуждая се от пътна помощ в Костинброд.\n\nМоята локация:\nhttps://maps.google.com/?q=${lat},${lng}`;
-                const phone = '+359877845569';
-                if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-                    window.location.href = `sms:${phone}?body=${encodeURIComponent(message)}`;
-                } else {
-                    navigator.clipboard.writeText(message).then(() => {
-                        alert("✅ Локацията е копирана! Изпратете я на: " + phone);
-                    }).catch(() => alert(message));
-                }
-            }, () => alert("Моля позвънете директно на: 0877 845 569"), { enableHighAccuracy: true, timeout: 10000 });
-        }
-        function changeLanguage(lang) {
-            const pages = { 'bg': '/kostinbrod.html', 'en': '/english.html', 'de': '/german.html', 'tr': '/turk.html', 'ro': '/rom.html' };
-            if (pages[lang]) window.location.href = pages[lang];
-        }
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', () => changeLanguage(btn.dataset.lang));
-        });
-    </script>
+
+    <script defer src="main.js"></script>
 </body>
 </html>
