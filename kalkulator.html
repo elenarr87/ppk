@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>🚨 Калкулатор Цена Пътна Помощ – Костинброд, Петрохан, Калотина, Сливница, Божурище, Драгоман, Гинци, Волуяк, Е80 24/7 | 0877 845 569</title>
     <meta name="description" content="⚡ Единственият онлайн калкулатор за пътна помощ в Костинброд, Петрохан, Калотина, Сливница, Божурище, Драгоман, Гинци, Волуяк и Е80! Изчислете точната цена за секунди – без скрити такси.">
+    <meta name="ai-summary" content="Онлайн калкулатор за точна цена на пътна помощ в Костинброд, Калотина, Петрохан, Сливница и Е80. Прозрачни тарифи, двупосочен курс, нощна такса и допълнителни услуги в рамките на секунди.">
     <meta name="keywords" content="калкулатор пътна помощ, цена репатрак петрохан, цена пътна помощ калотина, онлайн калкулатор е80, прозрачни цени костинброд, пътна помощ сливница, пътна помощ божурище, пътна помощ драгоман, пътна помощ гинци, пътна помощ волуяк">
     <meta name="author" content="Транспортер Иван Иванов ЕООД">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html">
+    <link rel="amphtml" href="https://patna-pomosht-kostinbrod.bg/kalkulator.amp.html">
    
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://patna-pomosht-kostinbrod.bg/kalkulator.html">
@@ -25,320 +27,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-   
-    <style>
-        :root {
-            --primary: #FF7A00;
-            --primary-dark: #E55A2B;
-            --secondary: #28a745;
-            --dark: #1A1A2E;
-            --text: #2d3748;
-            --muted: #6b7280;
-            --light: #fff5f0;
-            --radius: 20px;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --shadow-md: 0 10px 30px rgba(0,0,0,0.12);
-            --shadow-lg: 0 20px 50px rgba(255,122,0,0.3);
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
-            color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 3rem 1rem 2rem;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-        }
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(2rem, 6vw, 3.5rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        header p {
-            font-size: 1.3rem;
-            opacity: 0.95;
-        }
-        .language-selector {
-            text-align: center;
-            padding: 1rem 0;
-            background: var(--dark);
-        }
-        .language-selector button {
-            background: transparent;
-            border: 3px solid transparent;
-            cursor: pointer;
-            margin: 0 8px;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        .language-selector button:hover {
-            transform: scale(1.2);
-            box-shadow: 0 0 15px rgba(255,255,255,0.3);
-        }
-        .language-selector button.active {
-            transform: scale(1.3);
-            box-shadow: 0 0 20px rgba(255,255,255,0.6);
-            border: 3px solid white;
-        }
-        .language-selector img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 24px;
-            box-shadow: var(--shadow-md);
-        }
-        .form-group {
-            margin-bottom: 2rem;
-        }
-        label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            font-size: 1.1rem;
-            color: var(--text);
-        }
-        input, select {
-            width: 100%;
-            padding: 16px 20px;
-            border: 2px solid #e2e8f0;
-            border-radius: var(--radius);
-            font-size: 1.1rem;
-            transition: var(--transition);
-        }
-        input:focus, select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 5px rgba(255,122,0,0.2);
-        }
-        .checkbox-group {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 20px;
-            background: var(--light);
-            border-radius: var(--radius);
-            margin-bottom: 1rem;
-            transition: var(--transition);
-            cursor: pointer;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .checkbox-group:hover {
-            background: white;
-            box-shadow: var(--shadow-md);
-            transform: translateY(-2px);
-        }
-        .checkbox-group input[type="checkbox"] {
-            width: 26px;
-            height: 26px;
-            accent-color: var(--primary);
-        }
-        .checkbox-group label {
-            flex: 1;
-            margin-left: 1rem;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-bottom: 0;
-        }
-        .number-input {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .number-input button {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.4rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-        .number-input button:hover {
-            background: var(--primary);
-            color: white;
-        }
-        .number-input input {
-            width: 60px;
-            text-align: center;
-            padding: 10px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-        }
-        .calc-btn {
-            width: 100%;
-            padding: 22px;
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: var(--radius);
-            font-size: 1.6rem;
-            font-weight: 800;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: var(--shadow-lg);
-            margin: 2rem 0;
-        }
-        .calc-btn:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-lg), 0 25px 60px rgba(255,122,0,0.4);
-        }
-        .result {
-            margin-top: 3rem;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #e8f5e8, #d4edda);
-            border: 5px solid var(--secondary);
-            border-radius: 28px;
-            text-align: center;
-            display: none;
-            animation: fadeIn 0.8s ease-out;
-            box-shadow: var(--shadow-lg);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .result h3 {
-            font-size: 2rem;
-            color: var(--text);
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        .final-price-card {
-            background: linear-gradient(135deg, var(--secondary), #218838);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 28px;
-            margin: 2rem 0;
-            box-shadow: var(--shadow-lg);
-        }
-        .final-price-card h4 {
-            font-size: 2.4rem;
-            margin-bottom: 1.5rem;
-        }
-        .final-price-card .price {
-            font-size: 5rem;
-            font-weight: 900;
-            font-family: 'Montserrat', sans-serif;
-            line-height: 1.2;
-            margin: 1rem 0;
-        }
-        .final-price-card .price-small {
-            font-size: 2.8rem;
-            margin-top: 0.5rem;
-            opacity: 0.95;
-        }
-        .breakdown {
-            margin: 2rem 0;
-            background: white;
-            padding: 2rem;
-            border-radius: var(--radius);
-            text-align: left;
-            box-shadow: var(--shadow-md);
-        }
-        .breakdown-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 1rem 0;
-            border-bottom: 1px dashed #ddd;
-            font-size: 1.1rem;
-        }
-        .breakdown-item:last-child {
-            border-bottom: none;
-            font-weight: 800;
-            font-size: 1.6rem;
-            color: var(--secondary);
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        .breakdown-item:last-child span:first-child {
-            align-self: flex-start;
-            font-size: 1.4rem;
-        }
-        .call-now {
-            display: block;
-            margin: 3rem auto 0;
-            padding: 24px 48px;
-            background: var(--secondary);
-            color: white;
-            font-size: 1.8rem;
-            font-weight: 800;
-            border-radius: 999px;
-            text-decoration: none;
-            box-shadow: var(--shadow-lg);
-            transition: var(--transition);
-            max-width: 90%;
-        }
-        .call-now:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 70px rgba(40,167,69,0.5);
-        }
-        .sticky-phone {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--secondary);
-            color: white;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: var(--shadow-lg);
-            z-index: 999;
-            transition: var(--transition);
-        }
-        .sticky-phone:hover {
-            transform: scale(1.2);
-        }
-        footer {
-            background: var(--dark);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem;
-            margin-top: 4rem;
-        }
-        .back-home {
-            display: inline-block;
-            margin: 1.5rem auto;
-            padding: 16px 36px;
-            background: var(--primary);
-            color: white;
-            text-decoration: none;
-            border-radius: var(--radius);
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        @media (max-width: 768px) {
-            .container { margin: 1rem; padding: 1.5rem; }
-            .final-price-card .price { font-size: 4rem; }
-            .final-price-card h4 { font-size: 2rem; }
-            .call-now { font-size: 1.6rem; padding: 20px 40px; }
-            .result h3 { font-size: 1.8rem; }
-        }
-    </style>
-</head>
-<body>
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="custom.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN9QE79LPZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WN9QE79LPZ', { 'anonymize_ip': true });
+    </script>
+ </head>
+ <body class="kalkulator-page">
     <header>
         <h1 id="header-title">Калкулатор за Цена на Пътна Помощ</h1>
         <p id="header-subtitle">Единственият в България – изчислете точната цена за Костинброд, Петрохан, Калотина, Сливница, Божурище, Драгоман, Гинци, Волуяк, Е80 за секунди!</p>
@@ -489,6 +188,40 @@
       ]
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Онлайн калкулатор за пътна помощ",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Транспортер Иван Иванов ЕООД",
+        "areaServed": ["Костинброд","Петрохан","Калотина","Сливница","Божурище","Драгоман","Гинци","Волуяк","Е80"]
+      },
+      "areaServed": ["Костинброд","Петрохан","Калотина","Сливница","Божурище","Драгоман","Гинци","Волуяк","Е80"],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Тарифи пътна помощ",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Пътна помощ до 1500 кг"},"priceCurrency":"EUR","price":"40","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","price":"0.75","unitText":"km"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Пътна помощ 1500–2000 кг"},"priceCurrency":"EUR","price":"45","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","price":"0.85","unitText":"km"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Пътна помощ над 2000 кг"},"priceCurrency":"EUR","price":"50","priceSpecification":{"@type":"UnitPriceSpecification","priceCurrency":"EUR","price":"0.95","unitText":"km"}}
+        ]
+      },
+      "termsOfService": "Нощна такса 22:00–07:00 +30%. Допълнителни такси: кука, гуми, забавяне, канавка."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Как се изчислява цената?","acceptedAnswer":{"@type":"Answer","text":"Въвеждате разстояние в едната посока, калкулаторът смята двупосочно и прилага тарифата според теглото. Ако сумата е под минимума, се начислява минималната цена."}},
+        {"@type":"Question","name":"Има ли нощна такса?","acceptedAnswer":{"@type":"Answer","text":"Да, между 22:00 и 07:00 се добавя 30% към изчислената стойност."}},
+        {"@type":"Question","name":"Какви са минималните цени?","acceptedAnswer":{"@type":"Answer","text":"Минимум 40 € за МПС до 1500 кг, 45 € за 1500–2000 кг и 50 € за над 2000 кг."}}
+      ]
+    }
+    </script>
     <script>
         const RATE = 1.95583;
         let currentLang = 'bg';
@@ -525,7 +258,7 @@
                 breakdownNoHook: "Липса на кука",
                 breakdownTires: "Блокирали гуми",
                 breakdownDelay: "Забавяне",
-                breakdownHeavy: "Тежка катастрофа",
+                breakdownHeavy: "Тежка каталистрофа",
                 breakdownDitch: "Изваждане от канавка",
                 breakdownNight: "Нощна услуга (+30%)",
                 breakdownTotal: "КРАЙНА ЦЕНА"
@@ -569,7 +302,7 @@
             },
             de: {
                 headerTitle: "Preisrechner Pannenhilfe",
-                headerSubtitle: "Der einzige in Bulgarien – berechnen Sie den Preis für Kostinbrod und E80!",
+                headerSubtitle: "Der единственият в Bulgarien – berechnen Sie den Preis за Kostinbrod и E80!",
                 labelService: "Dienstleistungstyp",
                 serviceTowing: "Pannenhilfe / Abschleppen",
                 serviceFuel: "Kraftstofflieferung",
@@ -591,7 +324,7 @@
                 resultTitle: "IHR GENAUER PREIS:",
                 callNow: "JETZT ANRUFEN: 0877 845 569",
                 backHome: "← Startseite",
-                footerCompany: "Transporter Ivan Ivanov GmbH",
+                footerCompany: "Transporter Иван Иванов GmbH",
                 footerAddress: "Byalo More 16, Kostinbrod 2230",
                 footerLicense: "Zertifikat Nr.42-00048/28.01.2021",
                 footerCopyright: "© 2021–2025 Alle Rechte vorbehalten",
@@ -826,9 +559,23 @@
             document.getElementById('totalBGN').innerText = (total * RATE).toFixed(2) + " лв";
             document.getElementById('breakdown').innerHTML = breakdownHTML;
             document.getElementById('result').style.display = 'block';
-
-            document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    </script>
-</body>
-</html>
++
++            if (typeof gtag !== 'undefined') {
++                gtag('event', 'calculate_price', {
++                    'event_category': 'engagement',
++                    'event_label': `${service}|${weight || 'n/a'}`,
++                    'value': total
++                });
++            }
+ 
+             document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+         }
++        const callCta = document.getElementById('call-now');
++        if (callCta && typeof gtag !== 'undefined') {
++            callCta.addEventListener('click', () => {
++                gtag('event', 'generate_lead', { event_category: 'Contact', event_label: 'Call from calculator' });
++            });
++        }
+     </script>
+ </body>
+ </html>
