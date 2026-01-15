@@ -327,6 +327,7 @@ body.kalkulator-page {
   padding: 3rem 1rem 2rem;
   text-align: center;
   box-shadow: var(--shadow-md);
+  position: relative;
 }
 
 .kalkulator-page header h1 {
@@ -623,21 +624,41 @@ body.kalkulator-page {
 .kalkulator-page footer {
   background: var(--dark);
   color: white;
-  text-align: center;
+  text-align: left;
   padding: 3rem 1rem;
   margin-top: 4rem;
 }
 
-.kalkulator-page .back-home {
-  display: inline-block;
-  margin: 1.5rem auto;
-  padding: 16px 36px;
-  background: var(--primary);
-  color: white;
+.kalkulator-page footer .footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.kalkulator-page footer h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.kalkulator-page footer p {
+  margin-bottom: 0.5rem;
+}
+
+.kalkulator-page footer a {
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  border-radius: var(--radius);
-  font-weight: 700;
-  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.kalkulator-page footer a:hover {
+  color: var(--primary);
+}
+
+.kalkulator-page footer i {
+  margin-right: 8px;
 }
 
 @media (max-width: 768px) {
@@ -646,6 +667,7 @@ body.kalkulator-page {
   .kalkulator-page .final-price-card h4 { font-size: 2rem; }
   .kalkulator-page .call-now { font-size: 1.6rem; padding: 20px 40px; }
   .kalkulator-page .result h3 { font-size: 1.8rem; }
+  .kalkulator-page footer .footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
