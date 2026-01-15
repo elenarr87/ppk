@@ -25,13 +25,12 @@
    
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     
-    <!-- Critical CSS Inline -->
+    <!-- Critical CSS Inline (only basic layout, no sticky, no animations) -->
     <style>
-      /* Critical CSS */
       :root{--primary:#FF7A00;--primary-dark:#E55A2B;--secondary:#28a745;--dark:#1A1A2E;--text:#2d3748;--light:#fff5f0}
       *{box-sizing:border-box;margin:0;padding:0}
       body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#fff5f0;color:var(--text);line-height:1.6}
-      header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;position:sticky;top:0;z-index:1000;padding:1rem}
+      header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:1rem}
       .container{max-width:1200px;margin:auto;padding:0 1rem}
       footer{background:var(--dark);color:#ffffff;padding:2rem 1rem;margin-top:3rem}
     </style>
@@ -43,12 +42,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Preload Critical Resources -->
-    <link rel="preload" href="css/calculator.css" as="style">
     <link rel="preload" href="js/calculator.js" as="script">
     
     <!-- Stylesheets with Defer Load -->
     <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <link rel="stylesheet" href="css/calculator.css">
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
