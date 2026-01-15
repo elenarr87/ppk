@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WN9QE79LPZ"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -131,11 +132,43 @@
         </svg>
     </a>
     <footer>
-        <a href="/" class="back-home" id="back-home">← Начална страница</a>
-        <p><strong id="footer-company">Транспортер Иван Иванов ЕООД</strong></p>
-        <p id="footer-address">ул. Бяло море 16, Костинброд 2230</p>
-        <p id="footer-license">Удостоверение №42-00048/28.01.2021</p>
-        <p id="footer-copyright">© 2021–2025 Всички права запазени</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-building" aria-hidden="true"></i> <span id="footer-company">"Транспортер Иван Иванов" ЕООД</span></p>
+                    <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> <span id="footer-address">ул. Бяло море 16, Костинброд 2230</span></p>
+                    <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+359877845569">+359 877 845 569</a></p>
+                    <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:lind_2003@abv.bg">lind_2003@abv.bg</a></p>
+                    <p><i class="fab fa-facebook-f" aria-hidden="true"></i> <a href="https://www.facebook.com/patnapomoshtkostinbrod" target="_blank" rel="noopener">Facebook страница</a></p>
+                    <p><i class="fab fa-google" aria-hidden="true"></i> <a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener">Google Business профил</a></p>
+                </div>
+                <div>
+                    <h3 id="footer-quick-links">Бързи връзки</h3>
+                    <p><a href="/" id="back-home">Главна страница</a></p>
+                    <p><a href="kalkulator.html">Калкулатор за цена</a></p>
+                    <p><a href="blog/index.html">Блог</a></p>
+                    <p><a href="kostinbrod.html">Пътна помощ Костинброд</a></p>
+                    <p><a href="kalotina.html">Пътна помощ Калотина</a></p>
+                </div>
+                <div>
+                    <h3 id="footer-hours-title">Работно време</h3>
+                    <p class="footer-hours" id="footer-hours">ДЕНОНОЩНО 24/7</p>
+                    <p id="footer-schedule">Понеделник - Неделя: 00:00 - 23:59</p>
+                    <p class="footer-certificate" id="footer-license">Удостоверение №42-00048/28.01.2021</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <p class="footer-social-title" id="footer-follow">Следвайте ни:</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://g.co/kgs/p32TnaT" target="_blank" rel="noopener" aria-label="Google Business"><i class="fab fa-google" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/road_assistance_/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.tiktok.com/@patnapomoshtkostinbrod" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                </div>
+                <p class="footer-copyright" id="footer-copyright">© 2021 - 2025 Всички права запазени. "Транспортер Иван Иванов" ЕООД.</p>
+            </div>
+        </div>
     </footer>
     <script type="application/ld+json">
     {
@@ -249,13 +282,20 @@
                 calcBtn: "ИЗЧИСЛИ ТОЧНАТА ЦЕНА",
                 resultTitle: "ВАШАТА ТОЧНА ЦЕНА:",
                 callNow: "ОБАДИ СЕ СЕГА: 0877 845 569",
-                backHome: "← Начална страница",
-                footerCompany: "Транспортер Иван Иванов ЕООД",
+                backHome: "Главна страница",
+                footerCompany: "\"Транспортер Иван Иванов\" ЕООД",
                 footerAddress: "ул. Бяло море 16, Костинброд 2230",
                 footerLicense: "Удостоверение №42-00048/28.01.2021",
-                footerCopyright: "© 2021–2025 Всички права запазени",
+                footerCopyright: "© 2021 - 2025 Всички права запазени. \"Транспортер Иван Иванов\" ЕООД.",
                 breakdownBase: "Базова цена (вкл. отиване и връщане)",
                 breakdownNoHook: "Липса на кука",
+                breakdownTires: "Блокирали гуми",
+                breakdownDelay: "Забавяне",
+                breakdownHeavy: "Тежка каталистрофа",
+                breakdownDitch: "Изваждане от канавка",
+                breakdownNight: "Нощна услуга (+30%)",
+                breakdownTotal: "КРАЙНА ЦЕНА"
+            },
                 breakdownTires: "Блокирали гуми",
                 breakdownDelay: "Забавяне",
                 breakdownHeavy: "Тежка каталистрофа",
@@ -442,11 +482,21 @@
             document.getElementById('calc-btn').innerText = t.calcBtn;
             document.getElementById('result-title').innerText = t.resultTitle;
             document.getElementById('call-now').innerText = t.callNow;
-            document.getElementById('back-home').innerText = t.backHome;
-            document.getElementById('footer-company').innerText = t.footerCompany;
-            document.getElementById('footer-address').innerText = t.footerAddress;
-            document.getElementById('footer-license').innerText = t.footerLicense;
-            document.getElementById('footer-copyright').innerText = t.footerCopyright;
+            if (document.getElementById('back-home')) {
+                document.getElementById('back-home').innerText = t.backHome;
+            }
+            if (document.getElementById('footer-company')) {
+                document.getElementById('footer-company').innerText = t.footerCompany;
+            }
+            if (document.getElementById('footer-address')) {
+                document.getElementById('footer-address').innerText = t.footerAddress;
+            }
+            if (document.getElementById('footer-license')) {
+                document.getElementById('footer-license').innerText = t.footerLicense;
+            }
+            if (document.getElementById('footer-copyright')) {
+                document.getElementById('footer-copyright').innerText = t.footerCopyright;
+            }
             document.querySelectorAll('.language-selector button').forEach(btn => btn.classList.remove('active'));
             if (event && event.target) {
                 let btn = event.target.closest('button');
