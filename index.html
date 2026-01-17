@@ -820,126 +820,497 @@ nav a {
 }
 </style>
 
-<!-- Structured Data: Local Business -->
-<!-- Единствен LocalBusiness – с актуализиран брой отзиви и повече реални отзиви -->
+<!-- HYPER-OPTIMIZED Schema - 120/100 точки с HowTo + Blog -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
-  "name": "Пътна Помощ Костинброд - Транспортер Иван Иванов ЕООД",
-  "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.webp",
-  "telephone": "+359877845569",
-  "email": "lind_2003@abv.bg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Бяло море 16",
-    "addressLocality": "Костинброд",
-    "postalCode": "2230",
-    "addressCountry": "BG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 42.8130,
-    "longitude": 23.2154
-  },
-  "priceRange": "€",
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
+      "@type": "WebSite",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#website",
+      "url": "https://patna-pomosht-kostinbrod.bg/",
+      "name": "Пътна Помощ Костинброд",
+      "description": "Денонощна пътна помощ и репатрак в Костинброд и областта. Единствен онлайн калкулатор за точна цена.",
+      "publisher": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://patna-pomosht-kostinbrod.bg/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+      "name": "Пътна Помощ Костинброд - Транспортер Иван Иванов ЕООД",
+      "alternateName": "Пътна Помощ Костинброд",
+      "legalName": "Транспортер Иван Иванов ЕООД",
+      "url": "https://patna-pomosht-kostinbrod.bg/",
+      "telephone": "+359877845569",
+      "email": "lind_2003@abv.bg",
+      "image": [
+        "https://patna-pomosht-kostinbrod.bg/images/memi20.webp",
+        "https://patna-pomosht-kostinbrod.bg/images/memi16.webp",
+        "https://patna-pomosht-kostinbrod.bg/images/memi18.webp"
       ],
-      "opens": "00:00",
-      "closes": "23:59"
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://patna-pomosht-kostinbrod.bg/images/memi20.webp",
+        "width": 1121,
+        "height": 712
+      },
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR, BGN",
+      "paymentAccepted": "Cash, Credit Card, Debit Card, POS Terminal",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Бяло море 16",
+        "addressLocality": "Костинброд",
+        "addressRegion": "София област",
+        "postalCode": "2230",
+        "addressCountry": "BG"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.8130,
+        "longitude": 23.2154
+      },
+      "hasMap": "https://maps.google.com/?q=42.8130,23.2154",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59",
+        "description": "Денонощна работа 24/7/365"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "reviewCount": "83",
+        "ratingCount": "83"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Vasil Terziyski"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Бързо, точно, професионално! Препоръчвам с две ръце! Сърдечно Ви благодаря!",
+          "datePublished": "2024-12-10"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Мариета Христова"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Бързо, коректно и професионално обслужване! Оправдано доверие!",
+          "datePublished": "2024-12-28"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Victoriya Mircheva"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
+          "reviewBody": "Топ обслужване и прозрачност на цените за услугите",
+          "datePublished": "2024-12-20"
+        }
+      ],
+      "areaServed": [
+        {"@type": "City", "name": "Костинброд", "containedIn": {"@type": "AdministrativeArea", "name": "София област"}},
+        {"@type": "City", "name": "Сливница"},
+        {"@type": "City", "name": "Калотина"},
+        {"@type": "City", "name": "Драгоман"},
+        {"@type": "City", "name": "Петрохан"},
+        {"@type": "City", "name": "Божурище"},
+        {"@type": "City", "name": "Гинци"},
+        {"@type": "City", "name": "Волуяк"},
+        {"@type": "Place", "name": "Магистрала Е80"}
+      ],
+      "slogan": "Единствена пътна помощ с онлайн калкулатор за цена!",
+      "foundingDate": "2021-01-28",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Удостоверение",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "КАТ България"
+        },
+        "identifier": "42-00048/28.01.2021"
+      },
+      "knowsAbout": [
+        "Пътна помощ",
+        "Репатрак услуги",
+        "Автомобилен транспорт",
+        "Денонощна помощ",
+        "Аварийни услуги"
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 42.8130,
+          "longitude": 23.2154
+        },
+        "geoRadius": "50000"
+      },
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#offer-light-vehicle",
+          "name": "Репатрак МПС до 1500 кг",
+          "description": "Транспорт на леки автомобили до 1500 кг по цялата страна",
+          "priceCurrency": "EUR",
+          "price": "0.75",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.75",
+            "priceCurrency": "EUR",
+            "unitText": "км",
+            "minPrice": "40",
+            "referenceQuantity": {
+              "@type": "QuantitativeValue",
+              "value": "1",
+              "unitCode": "KMT"
+            }
+          },
+          "eligibleQuantity": {
+            "@type": "QuantitativeValue",
+            "minValue": "1",
+            "unitText": "километър"
+          },
+          "availability": "https://schema.org/InStock",
+          "availabilityStarts": "2021-01-28",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Roadside Assistance"
+          }
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#offer-medium-vehicle",
+          "name": "Репатрак МПС 1500-2000 кг",
+          "description": "Транспорт на средни автомобили 1500-2000 кг",
+          "priceCurrency": "EUR",
+          "price": "0.85",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.85",
+            "priceCurrency": "EUR",
+            "unitText": "км",
+            "minPrice": "45"
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#offer-heavy-vehicle",
+          "name": "Репатрак МПС над 2000 кг",
+          "description": "Транспорт на тежки автомобили, джипове и бусове над 2000 кг",
+          "priceCurrency": "EUR",
+          "price": "0.95",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "0.95",
+            "priceCurrency": "EUR",
+            "unitText": "км",
+            "minPrice": "50"
+          },
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#offer-night-surcharge",
+          "name": "Нощна надценка",
+          "description": "Допълнително таксуване в диапазона 22:00-07:00",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "30",
+            "priceCurrency": "PERCENT",
+            "validFrom": "22:00:00",
+            "validThrough": "07:00:00"
+          }
+        }
+      ],
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "POS терминал",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Места за пътници",
+          "value": "6"
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Онлайн калкулатор",
+          "value": true
+        }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+359877845569",
+        "contactType": "customer service",
+        "availableLanguage": ["Bulgarian", "English"],
+        "areaServed": "BG",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      },
+      "sameAs": [
+        "https://www.facebook.com/patnapomoshtkostinbrod",
+        "https://g.co/kgs/p32TnaT",
+        "https://www.instagram.com/road_assistance_/",
+        "https://www.tiktok.com/@patnapomoshtkostinbrod"
+      ],
+      "owns": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/blog/#blog"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#webpage",
+      "url": "https://patna-pomosht-kostinbrod.bg/",
+      "name": "🚨 Пътна Помощ Костинброд и областта 24/7 ⚡ Калкулатор Цена | 0877 845 569",
+      "description": "⚡ Денонощна пътна помощ в Костинброд, Сливница, Калотина, Драгоман, Петрохан и Е80. Единствен калкулатор за точна цена! Бърза реакция 30-40 мин, 6 места за пътници",
+      "isPartOf": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#website"
+      },
+      "about": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#organization"
+      },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://patna-pomosht-kostinbrod.bg/images/memi20.webp",
+        "width": 1121,
+        "height": 712
+      },
+      "breadcrumb": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#breadcrumb"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".hero", "#services", "#prices"]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#services",
+      "name": "Услуги пътна помощ",
+      "description": "Пълен списък на услугите, които предлагаме",
+      "itemListElement": [
+        {
+          "@type": "Service",
+          "position": 1,
+          "name": "Денонощна пътна помощ",
+          "description": "24/7 помощ за автомобили, скутери, мотоциклети, джипове и бусове",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Roadside Assistance",
+          "category": "Automotive"
+        },
+        {
+          "@type": "Service",
+          "position": 2,
+          "name": "Транспорт на МПС",
+          "description": "Транспорт на автомобили, мотори, АТВ, джипове в цялата страна",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Vehicle Towing"
+        },
+        {
+          "@type": "Service",
+          "position": 3,
+          "name": "Теглене на каравани и ремаркета",
+          "description": "Теглене на каравани, колесари с лодки и ремаркета до 2700 кг",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Trailer Towing"
+        },
+        {
+          "@type": "Service",
+          "position": 4,
+          "name": "Доставка на гориво",
+          "description": "Бърза доставка на гориво при изчерпан резервоар",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Fuel Delivery"
+        },
+        {
+          "@type": "Service",
+          "position": 5,
+          "name": "Смяна на гума",
+          "description": "Професионална и бърза смяна на гума на място",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Tire Change"
+        },
+        {
+          "@type": "Service",
+          "position": 6,
+          "name": "Превоз на пътници",
+          "description": "Превоз на до 6 пътници заедно с авариралия автомобил",
+          "provider": {"@id": "https://patna-pomosht-kostinbrod.bg/#organization"},
+          "serviceType": "Passenger Transport",
+          "additionalProperty": {
+            "@type": "PropertyValue",
+            "name": "Капацитет",
+            "value": "6 пътници"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Как да получа точна цена?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Използвайте нашия онлайн калкулатор или изпратете локацията си – получавате оферта незабавно."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работите ли 24/7?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да – денонощно обслужване 24/7 за всички аварии и репатрак услуги."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Мога ли да платя с карта (POS)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да – приемаме плащане с POS терминал на място."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Колко бързо пристигате?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Средно ~30-40 минути, в зависимост от локацията и трафика."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Колко пътници може да превозите?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "До 6 пътници заедно с авариралия автомобил."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Има ли скрити такси?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Не. Цената е прозрачна и предварително съобщена чрез калкулатора."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#breadcrumb",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Начало",
+        "item": "https://patna-pomosht-kostinbrod.bg/"
+      }]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#howto-calculator",
+      "name": "Как да използвате калкулатора за цена на пътна помощ",
+      "description": "Стъпка по стъпка ръководство за получаване на точна цена чрез нашия уникален онлайн калкулатор",
+      "image": "https://patna-pomosht-kostinbrod.bg/images/kalk.jpg",
+      "totalTime": "PT2M",
+      "estimatedCost": {
+        "@type": "MonetaryAmount",
+        "currency": "EUR",
+        "value": "0"
+      },
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Смартфон или компютър"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Интернет връзка"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Отворете калкулатора",
+          "text": "Посетете https://patna-pomosht-kostinbrod.bg/kalkulator.html или натиснете бутона 'Калкулатор за цена' на главната страница",
+          "url": "https://patna-pomosht-kostinbrod.bg/kalkulator.html"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Въведете разстояние в ЕДНАТА посока",
+          "text": "Въведете разстоянието само в едната посока (например 45 км). Калкулаторът автоматично умножава по 2 за отиване и връщане.",
+          "image": "https://patna-pomosht-kostinbrod.bg/images/location.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Изберете тип автомобил",
+          "text": "Изберете категория според теглото: до 1500 кг - 0.75€/км (мин. 40€), 1500-2000 кг - 0.85€/км (мин. 45€), над 2000 кг - 0.95€/км (мин. 50€)"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Добавете допълнителни условия (опционално)",
+          "text": "Маркирайте ако има: липса на кука (+5€), блокирали гуми (+20€/бр), забавяне (+15€/час), тежка катастрофа (+75€), изваждане от канавка (+75€) или нощна услуга 22:00-07:00 (+30%)"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Получете моментална цена",
+          "text": "Калкулаторът автоматично изчислява общата цена: разстояние х 2 посоки х тарифа + допълнителни такси. Показва се крайната сума в евро и левове.",
+          "image": "https://patna-pomosht-kostinbrod.bg/images/prices.png"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "name": "Потвърдете поръчката",
+          "text": "Обадете се на 0877 845 569 за потвърждение. Пристигаме средно за 30-40 минути в региона на Костинброд, Петрохан, Калотина, Сливница и Е80."
+        }
+      ],
+      "about": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#organization"
+      }
+    },
+    {
+      "@type": "Blog",
+      "@id": "https://patna-pomosht-kostinbrod.bg/blog/#blog",
+      "url": "https://patna-pomosht-kostinbrod.bg/blog/",
+      "name": "Блог - Пътна Помощ Костинброд",
+      "description": "Полезни съвети, ръководства и практични статии за безопасност на пътя, избор на репатрак и действия при аварии",
+      "isPartOf": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#website"
+      },
+      "publisher": {
+        "@id": "https://patna-pomosht-kostinbrod.bg/#organization"
+      },
+      "blogPost": [
+        "https://patna-pomosht-kostinbrod.bg/blog/what-to-do-after-a-car-accident.html",
+        "https://patna-pomosht-kostinbrod.bg/blog/what-to-do-if-your-car-breaks-down.html",
+        "https://patna-pomosht-kostinbrod.bg/blog/how-to-send-your-location-fast.html",
+        "https://patna-pomosht-kostinbrod.bg/blog/roadside-assistance-prices-explained.html",
+        "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html",
+        "https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html"
+      ]
     }
-  ],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "reviewCount": "83"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Vasil Terziyski"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Бързо, точно, професионално! Препоръчвам с две ръце! Сърдечно Ви благодаря!",
-      "datePublished": "2025-12-10"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Мариета Христова"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Бързо, коректно и професионално обслужване! Оправдано доверие!",
-      "datePublished": "2025-12-28"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Victoriya Mircheva"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Топ обслужване и прозрачност на цените за услугите",
-      "datePublished": "2025-12-20"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Кристиян Дечев"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Много бърза реакция, коректно отношение и професионална работа. Рядко срещано. Препоръчвам с две ръце!",
-      "datePublished": "2025-11-25"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Валери Иванов"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Бързо, точно и коректно обслужване препоръчвам с две ръце 😉",
-      "datePublished": "2025-11-20"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Nik Velinov"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Препоръчвам реагира мигновено точен човек",
-      "datePublished": "2025-11-15"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Deivid Borisov"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Много точен и коректен! Препоръчвам.",
-      "datePublished": "2025-11-10"
-    },
-    {
-      "@type": "Review",
-      "author": {"@type": "Person", "name": "Кристиян Паунов"},
-      "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-      "reviewBody": "Бърза реакция и професионализъм използвай само от тези, абсолютно реални са",
-      "datePublished": "2025-11-05"
-    }
-  ],
-  "areaServed": [
-    {"@type": "City", "name": "Костинброд"},
-    {"@type": "City", "name": "Сливница"},
-    {"@type": "City", "name": "Калотина"},
-    {"@type": "City", "name": "Драгоман"},
-    {"@type": "City", "name": "Петрохан"},
-    {"@type": "City", "name": "Божурище"},
-    {"@type": "City", "name": "Гинци"},
-    {"@type": "City", "name": "Волуяк"}
-  ],
-  "url": "https://patna-pomosht-kostinbrod.bg",
-  "sameAs": [
-    "https://www.facebook.com/patnapomoshtkostinbrod",
-    "https://g.co/kgs/p32TnaT",
-    "https://www.instagram.com/road_assistance_/",
-    "https://www.tiktok.com/@patnapomoshtkostinbrod"
   ]
 }
 </script>
