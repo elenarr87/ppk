@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" itemscope itemtype="https://schema.org/LocalBusiness">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,7 +169,6 @@
         .breadcrumb a:hover, .breadcrumb a:focus {
             text-decoration: underline;
         }
-        .breadcrumb span { color: var(--muted); }
         .language-selector {
             text-align: center;
             padding: 10px 0;
@@ -469,90 +468,110 @@
         gtag('config', 'G-WN9QE79LPZ', { anonymize_ip: true, cookie_flags: 'SameSite=None; Secure' });
     </script>
    
-    <!-- Schema.org - LocalBusiness -->
-    <script type="application/ld+json">
+  <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Пътна Помощ Костинброд - Транспортер Иван Иванов ЕООД",
-  "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg",
-  "telephone": "+359877845569",
-  "email": "lind_2003@abv.bg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Бяло море 16",
-    "addressLocality": "Костинброд",
-    "postalCode": "2230",
-    "addressCountry": "BG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 42.8130,
-    "longitude": 23.2154
-  },
-  "priceRange": "€",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  }],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5.0,
-    "reviewCount": 75
-  },
-  "areaServed": [
-    {"@type":"City","name":"Костинброд"},
-    {"@type":"City","name":"Сливница"},
-    {"@type":"City","name":"Калотина"},
-    {"@type":"City","name":"Драгоман"},
-    {"@type":"City","name":"Петрохан"},
-    {"@type":"City","name":"Божурище"},
-    {"@type":"City","name":"Гинци"},
-    {"@type":"City","name":"Волуяк"}
-  ],
-  "url": "https://patna-pomosht-kostinbrod.bg/bojurishte",
-  "sameAs": [
-    "https://www.facebook.com/patnapomoshtkostinbrod",
-    "https://g.co/kgs/p32TnaT",
-    "https://www.instagram.com/road_assistance_/",
-    "https://www.tiktok.com/@patnapomoshtkostinbrod"
-  ]
-}
-
-    </script>
-   
-    <!-- Schema.org - Service -->
-    <script type="application/ld+json">
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Пътна помощ и репатрак в Божурище",
-      "provider": {
-        "@type": "LocalBusiness",
-        "name": "Транспортер Иван Иванов ЕООД"
+      "@type": "Organization",
+      "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+      "name": "Пътна Помощ Костинброд",
+      "url": "https://patna-pomosht-kostinbrod.bg/",
+      "logo": "https://patna-pomosht-kostinbrod.bg/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/patnapomoshtkostinbrod",
+        "https://g.co/kgs/p32TnaT",
+        "https://www.instagram.com/road_assistance_/",
+        "https://www.tiktok.com/@patnapomoshtinbrod"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 160
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#localbusiness",
+      "name": "Пътна помощ Божурище",
+      "parentOrganization": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+      "telephone": "+359877845569",
+      "priceRange": "€€",
+      "image": "https://patna-pomosht-kostinbrod.bg/images/memi2.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Бяло море 16",
+        "addressLocality": "Костинброд",
+        "postalCode": "2230",
+        "addressCountry": "BG"
       },
-      "areaServed": ["Божурище", "Костинброд", "Сливница", "Калотина", "Драгоман", "Петрохан", "Гинци", "Волуяк"],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.7604,
+        "longitude": 23.2017
+      },
+      "openingHours": [
+        "Mo-Su 00:00-23:59"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": 5,
+        "reviewCount": 160
+      },
+      "sameAs": [
+        "https://www.facebook.com/patnapomoshtkostinbrod",
+        "https://g.co/kgs/p32TnaT"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#service",
+      "name": "Репатрак и Пътна помощ Божурище",
+      "serviceType": "Roadside Assistance",
+      "provider": { "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#localbusiness" },
+      "areaServed": { "@type": "City", "name": "Божурище" },
       "availableChannel": {
         "@type": "ServiceChannel",
-        "servicePhone": "+359877845569"
+        "servicePhone": {
+          "@type": "ContactPoint",
+          "telephone": "+359877845569",
+          "contactType": "customer service",
+          "availableLanguage": ["Bulgarian"]
+        }
+      },
+      "offers": {
+        "@type": "AggregateOffer",
+        "priceCurrency": "BGN",
+        "lowPrice": 40,
+        "highPrice": 95,
+        "offerCount": 5
       }
-    }
-    </script>
-   
-    <!-- Schema.org - FAQPage -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#webpage",
+      "url": "https://patna-pomosht-kostinbrod.bg/bojurishte.html",
+      "name": "🚨 Пътна Помощ Божурище 24/7 ⚡ Калкулатор Цена",
+      "description": "Денонощна пътна помощ Божурище с бърза реакция 30-40 мин и онлайн калкулатор за точна цена. Превоз на до 6 пътници.",
+      "isPartOf": { "@id": "https://patna-pomosht-kostinbrod.bg/#website" },
+      "about": { "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#localbusiness" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://patna-pomosht-kostinbrod.bg/images/memi2.jpg"
+      },
+      "inLanguage": "bg-BG",
+      "breadcrumb": { "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#breadcrumb" }
+    },
+    {
       "@type": "FAQPage",
+      "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#faq",
       "mainEntity": [
         {
           "@type": "Question",
           "name": "Колко бързо пристигате в Божурище?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Средно 30-40 минути в зависимост от трафика и точното местоположение."
+            "text": "Средно време за пристигане е 30-40 минути в зависимост от трафика и точното местоположение."
           }
         },
         {
@@ -560,7 +579,7 @@
           "name": "Работите ли денонощно в Божурище?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да – 24/7, 365 дни в годината."
+            "text": "Да – 24/7, 365 дни в годината, включително празници."
           }
         },
         {
@@ -568,7 +587,7 @@
           "name": "Мога ли да платя с карта?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Да – разполагаме с POS терминал на място."
+            "text": "Да – разполагаме с POS терминал на място за безкасово плащане."
           }
         },
         {
@@ -576,82 +595,22 @@
           "name": "Колко пътници превозвате?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "До 6 пътници заедно с авариралия автомобил."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Как да получа точна цена?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Използвайте нашия онлайн калкулатор или се обадете директно на 0877 845 569 за оферта."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Обслужвате ли всички видове автомобили?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Да – леки автомобили, джипове, бусове, товарни до 3.5 тона, мотоциклети и каравани."
+            "text": "До 6 пътници могат да пътуват заедно с аварирания автомобил."
           }
         }
       ]
-    }
-    </script>
-   
-    <!-- Schema.org - Breadcrumb -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "https://patna-pomosht-kostinbrod.bg/bojurishte.html#breadcrumb",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Начало",
-          "item": "https://patna-pomosht-kostinbrod.bg/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Пътна помощ Божурище",
-          "item": "https://patna-pomosht-kostinbrod.bg/bojurishte.html"
-        }
+        { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://patna-pomosht-kostinbrod.bg/" },
+        { "@type": "ListItem", "position": 2, "name": "Божурище", "item": "https://patna-pomosht-kostinbrod.bg/bojurishte.html" }
       ]
     }
-    </script>
-   
-    <!-- Schema.org - Reviews -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Пътна Помощ Божурище",
-      "review": [
-        {
-          "@type": "Review",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-          "author": {"@type": "Person", "name": "Кристиян Гечев"},
-          "reviewBody": "Много бърза реакция, коректно отношение и професионална работа. Рядко срещано. Препоръчвам с две ръце!",
-          "publisher": {"@type": "Organization", "name": "Google"}
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-          "author": {"@type": "Person", "name": "Даниела Милева"},
-          "reviewBody": "Много съм доволна! Реагира бързо, помогна ми и не само че прибра колата и мен, а и търпеливо ме изчака да си взема портмонето.",
-          "publisher": {"@type": "Organization", "name": "Google"}
-        },
-        {
-          "@type": "Review",
-          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-          "author": {"@type": "Person", "name": "Viktor Georgiev"},
-          "reviewBody": "Силно препоръчвам! Бързо и професионално обслужване.",
-          "publisher": {"@type": "Organization", "name": "Google"}
-        }
-      ]
-    }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Премини към основното съдържание</a>
@@ -667,40 +626,7 @@
    
   
    
-    <div class="language-selector" role="navigation" aria-label="Избор на език">
-        <button data-lang="bg" class="lang-btn" aria-label="Превключи на български език">
-            <img src="images/Bulgaria.png" alt="" aria-hidden="true" width="36" height="36">
-        </button>
-        <button data-lang="en" class="lang-btn" aria-label="Switch to English">
-            <img src="images/en_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
-        </button>
-        <button data-lang="de" class="lang-btn" aria-label="Zu Deutsch wechseln">
-            <img src="images/de_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
-        </button>
-        <button data-lang="tr" class="lang-btn" aria-label="Türkçe'ye geç">
-            <img src="images/tr_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
-        </button>
-        <button data-lang="ro" class="lang-btn" aria-label="Treceți la română">
-            <img src="images/ro_flag_icon.png" alt="" aria-hidden="true" width="36" height="36">
-        </button>
-    </div>
-   
-    <div class="dropdown container">
-        <button class="dropbtn" aria-expanded="false" aria-haspopup="true" id="regions-btn">
-            ОБСЛУЖВАНИ РАЙОНИ <i class="fas fa-chevron-down" aria-hidden="true"></i>
-        </button>
-        <div class="dropdown-content" aria-labelledby="regions-btn">
-            <a href="/">Костинброд</a>
-            <a href="/kalotina.html">Калотина</a>
-            <a href="/slivnica.html">Сливница</a>
-            <a href="/petrohan.html">Петрохан</a>
-            <a href="/dragoman.html">Драгоман</a>
-            <a href="/bojurishte.html">Божурище</a>
-            <a href="/ginci.html">Гинци</a>
-            <a href="/magistralaevropa.html">Магистрала Европа</a>
-            <a href="/voluiak.html">Волуяк</a>
-        </div>
-    </div>
+    
    
     <main id="main-content" class="container">
         <section class="hero">
@@ -924,7 +850,7 @@
     <div id="cookie-consent" style="display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:10001;background:#fff3e6;border:1px solid #ffd0b3;padding:14px 18px;border-radius:12px;box-shadow:var(--shadow-md);max-width:600px;width:90%">
         <span style="color:#333">Използваме бисквитки за по-добро преживяване. Приемате ли?</span>
         <div style="display:inline-flex;gap:8px;margin-left:12px">
-            <button id="cookie-accept" style="background:#FF7A00;color:#fff;border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;min-height:44px">Приемам</button>
+            <button id="cookie-accept" style="background:#FF7A00;color:#fff;border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;min-height:44px">��риемам</button>
             <button id="cookie-decline" style="background:transparent;color:#FF7A00;border:2px solid #FF7A00;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;min-height:44px">Отказвам</button>
         </div>
     </div>

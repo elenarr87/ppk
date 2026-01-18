@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" itemscope itemtype="https://schema.org/LocalBusiness">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -339,87 +339,169 @@
         gtag('js', new Date());
         gtag('config', 'G-WN9QE79LPZ', { anonymize_ip: true });
     </script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Пътна Помощ Костинброд - Транспортер Иван Иванов ЕООД",
-      "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg",
-      "telephone": "+359877845569",
-      "email": "lind_2003@abv.bg",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ул. Бяло море 16",
-        "addressLocality": "Костинброд",
-        "postalCode": "2230",
-        "addressCountry": "BG"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 42.8130,
-        "longitude": 23.2154
-      },
-      "priceRange": "€",
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": 5.0,
-        "reviewCount": 75
-      },
-      "areaServed": [
-        {"@type":"City","name":"Костинброд"},
-        {"@type":"City","name":"Сливница"},
-        {"@type":"City","name":"Калотина"},
-        {"@type":"City","name":"Драгоман"},
-        {"@type":"City","name":"Петрохан"},
-        {"@type":"City","name":"Божурище"},
-        {"@type":"City","name":"Гинци"},
-        {"@type":"City","name":"Волуяк"}
-      ],
-      "url": "https://patna-pomosht-kostinbrod.bg/kalotina.html",
-      "sameAs": [
-        "https://www.facebook.com/patnapomoshtkostinbrod",
-        "https://g.co/kgs/p32TnaT",
-        "https://www.instagram.com/road_assistance_/",
-        "https://www.tiktok.com/@patnapomoshtkostinbrod"
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question","name": "Колко бързо пристигате на ГКПП Калотина?","acceptedAnswer": {"@type": "Answer","text": "Средно 30-40 минути, в зависимост от трафика и точното местоположение на границата или Е80."}},
-        {"@type": "Question","name": "Работите ли 24/7 на границата?","acceptedAnswer": {"@type": "Answer","text": "Да – денонощно обслужване 24/7, включително на ГКПП Калотина и магистрала Е80."}},
-        {"@type": "Question","name": "Мога ли да платя с карта (POS)?","acceptedAnswer": {"@type": "Answer","text": "Да – приемаме плащане с POS терминал на място."}},
-        {"@type": "Question","name": "Колко пътници може да превозите?","acceptedAnswer": {"@type": "Answer","text": "До 6 пътници заедно с авариралия автомобил."}}
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Начало",
-        "item": "https://patna-pomosht-kostinbrod.bg/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Калотина",
-        "item": "https://patna-pomosht-kostinbrod.bg/kalotina.html"
-      }]
-    }
-    </script>
+        <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+            "name": "Пътна Помощ Костинброд",
+            "url": "https://patna-pomosht-kostinbrod.bg/",
+            "logo": "https://patna-pomosht-kostinbrod.bg/images/logo.png"
+        },
+        {
+            "@type": "LocalBusiness",
+            "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#localbusiness",
+            "name": "Пътна помощ Калотина – Пътна Помощ Костинброд",
+            "parentOrganization": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+            "url": "https://patna-pomosht-kostinbrod.bg/kalotina.html",
+            "telephone": "+359877845569",
+            "priceRange": "€€",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "ул. Бяло море 16",
+                "addressLocality": "Костинброд",
+                "addressRegion": "София област",
+                "postalCode": "2230",
+                "addressCountry": "BG"
+            },
+            "areaServed": [
+                { "@type": "Place", "name": "ГКПП Калотина" },
+                { "@type": "City", "name": "Драгоман" },
+                { "@type": "City", "name": "Сливница" },
+                { "@type": "City", "name": "Божурище" },
+                { "@type": "City", "name": "Костинброд" }
+            ],
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday","Tuesday","Wednesday","Thursday",
+                    "Friday","Saturday","Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+            },
+            "sameAs": [
+                "https://www.facebook.com/patnapomoshtkostinbrod",
+                "https://g.co/kgs/p32TnaT",
+                "https://www.instagram.com/road_assistance_/",
+                "https://www.tiktok.com/@patnapomoshtkostinbrod"
+            ],
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "83"
+            }
+        },
+        {
+            "@type": "Service",
+            "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#service",
+            "name": "Пътна помощ и репатрак в Калотина",
+            "serviceType": "Roadside Assistance",
+            "provider": {
+                "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#localbusiness"
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "ГКПП Калотина"
+            },
+            "availableChannel": {
+                "@type": "ServiceChannel",
+                "servicePhone": {
+                    "@type": "ContactPoint",
+                    "telephone": "+359877845569",
+                    "contactType": "customer service",
+                    "availableLanguage": "Bulgarian"
+                }
+            },
+            "offers": {
+                "@type": "AggregateOffer",
+                "priceCurrency": "EUR",
+                "lowPrice": "40",
+                "highPrice": "520",
+                "offerCount": 3,
+                "availability": "https://schema.org/InStock"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#webpage",
+            "url": "https://patna-pomosht-kostinbrod.bg/kalotina.html",
+            "name": "🚨 Пътна помощ Калотина 24/7 | Репатрак и калкулатор цена",
+            "description": "Денонощна пътна помощ на ГКПП Калотина и Е80. Бърза реакция 30–40 мин, репатрак, превоз на до 6 пътници и точна цена с онлайн калкулатор.",
+            "inLanguage": "bg-BG",
+            "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+            "about": {
+                "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#localbusiness"
+            },
+            "primaryImageOfPage": {
+                "@type": "ImageObject",
+                "url": "https://patna-pomosht-kostinbrod.bg/images/memi2.jpg"
+            },
+            "breadcrumb": {
+                "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#breadcrumb"
+            }
+        },
+        {
+            "@type": "FAQPage",
+            "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#faq",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Колко бързо пристигате на ГКПП Калотина?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Средно 30–40 минути в зависимост от трафика и метеорологичните условия."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Работите ли денонощно?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да – пътна помощ на ГКПП Калотина 24/7, включително при тежки метеорологични условия."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Приемате ли плащане с карта (POS)?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Да – приемаме плащане с POS терминал на място."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Колко пътници може да превозите?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "До 6 пътници заедно с авариралия автомобил."
+                    }
+                }
+            ]
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://patna-pomosht-kostinbrod.bg/kalotina.html#breadcrumb",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Начало",
+                    "item": "https://patna-pomosht-kostinbrod.bg/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Пътна помощ Калотина",
+                    "item": "https://patna-pomosht-kostinbrod.bg/kalotina.html"
+                }
+            ]
+        }
+    ]
+}
+</script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Премини към основното съдържание</a>

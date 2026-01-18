@@ -1,7 +1,7 @@
-/* =================================================================
-   ПЪТНА ПОМОЩ КОСТИНБРОД - MAIN STYLESHEET
-   Version: 2.0.0 | Optimized: January 2025
-   ================================================================= */
+/* ================================================================= */
+/* Main stylesheet (ASCII-clean header for cPanel parser)            */
+/* Version: 2.0.0 | Optimized: January 2025                         */
+/* ================================================================= */
 
 /* ========== CSS VARIABLES ========== */
 :root {
@@ -13,21 +13,22 @@
   --muted: #5a5a5a;
   --light: #fff5f0;
   --radius: 12px;
-  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.12);
-  --shadow-lg: 0 12px 40px rgba(255, 122, 0, 0.2);
+  /* Transition tokens - avoid `transition: all` for performance */
+  --transition-duration: 0.35s;
+  --transition-easing: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: transform var(--transition-duration) var(--transition-easing), box-shadow var(--transition-duration) var(--transition-easing), background-color var(--transition-duration) var(--transition-easing);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 30px rgba(0,0,0,0.12);
+  --shadow-lg: 0 12px 40px rgba(255,122,0,0.2);
+  /* centralized z-index tokens to avoid collisions */
+  --z-header: 1000;
+  --z-sticky: 900;
+  --z-skiplink: 1100;
 }
 
-/* ========== CRITICAL CSS (from index.html) ========== */
-body{margin:0;font-family:'Inter',system-ui;background:#fff5f0;line-height:1.6}
-header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:1rem;position:sticky;top:0;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,.15)}
-.header-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.hero{background:linear-gradient(135deg,#e6ffe6,#c8e6c9);border: 3px solid #28a745;border-radius:20px;padding:2rem;margin:2rem auto;text-align:center;max-width:1200px}
-.skip-link{position:absolute;top:-40px;left: 6px;background:var(--primary);color:#fff;padding:8px 12px;border-radius:8px;z-index:10000;text-decoration:none}
-.skip-link:focus{top:6px;outline:3px solid #fff}
-.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-
+/* CRITICAL CSS moved to full definitions below. Removed duplicated compressed critical block to avoid double-application. */
+/* Critical styles are defined below in full form to avoid duplication. */
+/* Critical above-the-fold rules are defined in the main sections below to avoid duplication. */
 /* ========== RESET & BASE ========== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -36,11 +37,12 @@ header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));col
 }
 
 body {
-  font-family: 'Inter', system-ui; 
+  font-family: 'Inter', system-ui;
   background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%);
   color: var(--text);
   line-height: 1.6;
-  padding-bottom: 80px;
+  /* reserve space for sticky CTA to avoid layout shift when it's shown */
+  padding-bottom: 120px;
 }
 
 /* ========== KALKULATOR PAGE LAYOUT OVERRIDES ========== */
@@ -73,6 +75,17 @@ body.kalkulator-page section {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+}
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .skip-link {
@@ -130,17 +143,15 @@ header h1 {
   gap: 8px;
   box-shadow: var(--shadow-sm);
   min-height: 44px;
+  transition: var(--transition-fast);
 }
 
 @media (hover: hover) {
-  .header-cta:hover {
+  .header-cta:hover,
+  .header-cta:focus {
     background: #218838;
     transform: translateY(-2px);
   }
-}
-
-.header-cta:focus {
-  background: #218838;
 }
 
 .header-cta:focus {
@@ -310,6 +321,8 @@ nav a {
   box-shadow: var(--shadow-md);
   max-width: 1200px;
   margin: 2rem auto;
+  /* Reserve vertical space to avoid CLS on font swap or image load */
+  min-height: 420px;
 }
 
 .hero h2 {
@@ -318,6 +331,9 @@ nav a {
   color: var(--primary);
   margin-bottom: 1rem;
   font-weight: 800;
+  /* Reserve space for up to two lines to reduce CLS when fonts swap */
+  line-height: 1.05;
+  min-height: 88px;
 }
 
 /* ========== BUTTONS ========== */
@@ -399,7 +415,8 @@ section h2 {
 }
 
 @media (hover: hover) {
-  .service-list li:hover {
+.service-list li:hover,
+.service-list li:focus-within {
     transform: translateX(8px);
     background: #fff;
   }
@@ -409,7 +426,7 @@ section h2 {
   color: var(--primary);
   text-decoration: none;
   font-weight: 600;
-  transition: var(--transition);
+  transition: var(--transition-fast);
 }
 
 .service-list a:hover {

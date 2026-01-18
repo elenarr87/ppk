@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" itemscope itemtype="https://schema.org/LocalBusiness">
+<html lang="bg">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,6 +55,733 @@
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Preload Font Awesome (ЛОКАЛНИ файлове) -->
+    <link rel="preload" href="/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Font Awesome ЛОКАЛНО (оптимизирано) -->
+    <style>
+    @font-face {
+      font-family: 'Font Awesome 6 Free';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: url('/webfonts/fa-solid-900.woff2') format('woff2');
+    }
+
+    @font-face {
+      font-family: 'Font Awesome 6 Brands';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url('/webfonts/fa-brands-400.woff2') format('woff2');
+    }
+
+    .fa, .fas, .far, .fab, .fa-solid, .fa-brands {
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 1;
+      text-rendering: auto;
+    }
+
+    .fa::before, .fas::before, .far::before, .fab::before {
+      display: inline-block;
+    }
+
+    .fa, .fas, .fa-solid {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+    }
+
+    .fab, .fa-brands {
+      font-family: 'Font Awesome 6 Brands';
+      font-weight: 400;
+    }
+
+    .far {
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 400;
+    }
+
+    /* Icon codes */
+    .fa-phone::before { content: "\f095"; }
+    .fa-phone-alt::before { content: "\f879"; }
+    .fa-calculator::before { content: "\f1ec"; }
+    .fa-map-marker-alt::before { content: "\f3c5"; }
+    .fa-tools::before { content: "\f7d9"; }
+    .fa-tag::before { content: "\f02b"; }
+    .fa-map::before { content: "\f279"; }
+    .fa-star::before { content: "\f005"; }
+    .fa-comments::before { content: "\f086"; }
+    .fa-blog::before { content: "\f781"; }
+    .fa-car-crash::before { content: "\f5e1"; }
+    .fa-truck-ramp-box::before { content: "\f4de"; }
+    .fa-trailer::before { content: "\e041"; }
+    .fa-gas-pump::before { content: "\f52f"; }
+    .fa-tire::before { content: "\f631"; }
+    .fa-users::before { content: "\f0c0"; }
+    .fa-car::before { content: "\f1b9"; }
+    .fa-truck-pickup::before { content: "\f63c"; }
+    .fa-truck::before { content: "\f0d1"; }
+    .fa-money-bill-wave::before { content: "\f53a"; }
+    .fa-concierge-bell::before { content: "\f562"; }
+    .fa-images::before { content: "\f302"; }
+    .fa-shield-alt::before { content: "\f3ed"; }
+    .fa-tachometer-alt::before { content: "\f3fd"; }
+    .fa-money-check-alt::before { content: "\f53d"; }
+    .fa-thumbs-up::before { content: "\f164"; }
+    .fa-handshake::before { content: "\f2b5"; }
+    .fa-question-circle::before { content: "\f059"; }
+    .fa-phone-volume::before { content: "\f2a0"; }
+    .fa-building::before { content: "\f1ad"; }
+    .fa-envelope::before { content: "\f0e0"; }
+    .fa-highway::before { content: "\f61f"; }
+    .fa-chevron-down::before { content: "\f078"; }
+    .fa-dollar-sign::before { content: "\f155"; }
+    .fa-external-link-alt::before { content: "\f35d"; }
+    .fa-facebook-f::before { content: "\f39e"; }
+    .fa-google::before { content: "\f1a0"; }
+    .fa-instagram::before { content: "\f16d"; }
+    .fa-tiktok::before { content: "\e07b"; }
+
+    :root{
+      --primary:#FF7A00;
+      --primary-dark:#E55A2B;
+      --secondary:#28a745;
+      --dark:#1A1A2E;
+      --text:#2d3748;
+      --muted:#5a5a5a;
+      --light:#fff5f0;
+      --radius:12px;
+      --transition:all 0.35s cubic-bezier(0.4,0,0.2,1);
+      --shadow-sm:0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md:0 8px 30px rgba(0,0,0,0.12);
+      --shadow-lg:0 12px 40px rgba(255,122,0,0.2);
+    }
+
+    *,*::before,*::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    body{
+      font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+      background:linear-gradient(135deg,#fff5f0 0%,#ffe8dc 100%);
+      color:var(--text);
+      line-height:1.6;
+      padding-bottom:100px;
+      min-height:100vh;
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+      }
+    }
+
+    .skip-link{
+      position:absolute;
+      top:-40px;
+      left:6px;
+      background:var(--primary);
+      color:#fff;
+      padding:8px 12px;
+      border-radius:var(--radius);
+      z-index:10000;
+      transition:top var(--transition);
+      text-decoration:none;
+    }
+    .skip-link:focus{top:6px;}
+
+    header{
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:#fff;
+      padding:1rem;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:var(--shadow-md);
+    }
+
+    .header-container{
+      max-width:1200px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:1rem;
+    }
+
+    header h1{
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(1.2rem,3vw,2rem);
+      font-weight:800;
+      margin:0;
+    }
+
+    .header-cta{
+      background:var(--secondary);
+      color:#fff;
+      padding:10px 16px;
+      border-radius:var(--radius);
+      text-decoration:none;
+      font-weight:700;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      transition:var(--transition);
+      box-shadow:var(--shadow-sm);
+      min-height:44px;
+    }
+
+    .header-cta:hover,.header-cta:focus{
+      background:#218838;
+      transform:translateY(-3px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    .header-cta:focus{
+      outline:3px solid #fff;
+      outline-offset:2px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 1rem;
+    }
+
+    .language-selector{
+      text-align:center;
+      padding:10px 0;
+      background:var(--dark);
+      margin-bottom:20px;
+    }
+
+    .language-selector button{
+      background:transparent;
+      border:none;
+      cursor:pointer;
+      margin:0 5px;
+      width:36px;
+      height:36px;
+      transition:var(--transition);
+      min-width:44px;
+      min-height:44px;
+    }
+
+    .language-selector button:hover{
+      transform:scale(1.1);
+    }
+
+    .dropdown{
+      text-align:center;
+      margin:20px 0;
+      position:relative;
+    }
+
+    .dropbtn{
+      background:linear-gradient(135deg,#0b84ff,#084caa);
+      color:#fff;
+      padding:15px 25px;
+      border:none;
+      border-radius:var(--radius);
+      font-size:1.3em;
+      cursor:pointer;
+      max-width:400px;
+      width:calc(100% - 2em);
+      font-weight:700;
+      box-shadow:var(--shadow-md);
+      transition:var(--transition);
+      min-height:44px;
+    }
+
+    .dropbtn:hover{
+      transform:translateY(-3px);
+    }
+
+    .dropbtn:focus{
+      outline:2px solid #fff;
+      outline-offset:2px;
+    }
+
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:#fff;
+      min-width:250px;
+      box-shadow:var(--shadow-md);
+      z-index:10;
+      border-radius:var(--radius);
+      left:50%;
+      transform:translateX(-50%);
+      margin-top:5px;
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content{
+      display:block;
+    }
+
+    .dropdown-content a{
+      color:var(--text);
+      padding:12px 16px;
+      text-decoration:none;
+      display:block;
+      transition:var(--transition);
+    }
+
+    .dropdown-content a:hover{
+      background:var(--light);
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      background:var(--primary);
+      border-radius:var(--radius);
+      overflow:hidden;
+      padding:0;
+      margin:20px 0;
+    }
+
+    nav li{
+      flex-grow:1;
+      text-align:center;
+    }
+
+    nav a{
+      color:#fff;
+      display:block;
+      padding:15px 10px;
+      text-decoration:none;
+      font-weight:700;
+      transition:var(--transition);
+      min-height:44px;
+    }
+
+    nav a:hover{
+      background:var(--primary-dark);
+    }
+
+    .hero{
+      background:linear-gradient(135deg,#e6ffe6,#c8e6c9);
+      border:3px solid var(--secondary);
+      border-radius:20px;
+      padding:2rem;
+      margin:2rem 0;
+      text-align:center;
+      box-shadow:var(--shadow-md);
+      min-height:420px;
+      contain:layout;
+    }
+
+    .hero h2{
+      font-family:'Montserrat',sans-serif;
+      font-size:clamp(1.8rem,4vw,2.8rem);
+      color:var(--primary);
+      margin-bottom:1rem;
+      font-weight:800;
+      line-height:1.1;
+      min-height:88px;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:#fff;
+      padding:15px 30px;
+      border-radius:var(--radius);
+      font-weight:800;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      margin:.5rem;
+      box-shadow:var(--shadow-md);
+      border:none;
+      cursor:pointer;
+      transition:var(--transition);
+      position:relative;
+      overflow:hidden;
+      min-height:48px;
+    }
+
+    .btn-primary::before{
+      content:'';
+      position:absolute;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);
+      transition:left .6s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    .btn-primary:hover::before,
+    .btn-primary:focus::before{
+      left:100%;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    .btn-primary:focus{
+      outline:3px solid var(--primary-dark);
+      outline-offset:3px;
+    }
+
+    section{
+      background:#fff;
+      padding:2rem;
+      border-radius:20px;
+      margin:2rem 0;
+      box-shadow:var(--shadow-md);
+    }
+
+    section h2{
+      font-family:'Montserrat',sans-serif;
+      color:var(--primary);
+      text-align:center;
+      margin-bottom:1.5rem;
+      font-size:2rem;
+    }
+
+    .service-list{
+      list-style:none;
+      padding:0;
+    }
+
+    .service-list li{
+      padding:1rem;
+      border-left:4px solid var(--primary);
+      margin-bottom:1rem;
+      border-radius:var(--radius);
+      background:var(--light);
+      transition:var(--transition);
+    }
+
+    .service-list li:hover{
+      transform:translateX(10px);
+      background:#fff;
+    }
+
+    .area-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:15px;
+      margin-top:1rem;
+    }
+
+    .area-card{
+      padding:1.5rem;
+      background:linear-gradient(135deg,#fff5f0,#ffe8dc);
+      border:2px solid var(--primary);
+      border-radius:var(--radius);
+      text-align:center;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:700;
+      transition:var(--transition);
+      min-height:44px;
+    }
+
+    .area-card:hover,
+    .area-card:focus-within{
+      transform:scale(1.08) translateY(-8px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    .prices-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .price-card{
+      background:#fff;
+      border-left:4px solid var(--primary);
+      padding:1.5rem;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+      transition:var(--transition);
+    }
+
+    .price-card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-md);
+    }
+
+    .important-info{
+      background:linear-gradient(135deg,#fff3e6,#fff0de);
+      border-left:6px solid var(--primary-dark);
+      padding:1.5rem;
+      border-radius:var(--radius);
+      margin:2rem 0;
+    }
+
+    .image-gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:15px;
+    }
+
+    .image-gallery img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+      border-radius:var(--radius);
+      box-shadow:var(--shadow-sm);
+      transition:var(--transition);
+    }
+
+    .image-gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    .faq-item{
+      background:var(--light);
+      padding:1rem;
+      border-radius:var(--radius);
+      margin-bottom:.5rem;
+      cursor:pointer;
+    }
+
+    .faq-item summary{
+      font-weight:700;
+      color:var(--primary);
+      cursor:pointer;
+      min-height:44px;
+      display:flex;
+      align-items:center;
+    }
+
+    .sticky-cta{
+      position:fixed;
+      bottom:1rem;
+      left:1rem;
+      right:1rem;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      z-index:999;
+    }
+
+    .sticky-cta a{
+      flex:1;
+      max-width:220px;
+      background:var(--primary);
+      color:#fff;
+      padding:12px;
+      border-radius:var(--radius);
+      font-weight:800;
+      text-decoration:none;
+      text-align:center;
+      box-shadow:var(--shadow-md);
+      min-height:48px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+    }
+
+    .sticky-cta a:hover{
+      transform:translateY(-3px);
+      box-shadow:var(--shadow-lg);
+    }
+
+    footer{
+      background:var(--dark);
+      color:#fff;
+      padding:2rem 1rem;
+      margin-top:3rem;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:2rem;
+      max-width:1200px;
+      margin:0 auto 2rem;
+    }
+
+    footer h3{
+      color:var(--primary);
+      margin-bottom:1rem;
+    }
+
+    footer a{
+      color:rgba(255,255,255,.8);
+      text-decoration:none;
+      transition:var(--transition);
+    }
+
+    footer a:hover{
+      color:var(--primary);
+    }
+
+    .breadcrumb{
+      padding:12px 0;
+      background:var(--light);
+      border-radius:var(--radius);
+      margin:15px 0;
+      font-size:.95rem;
+      text-align:center;
+      box-shadow:var(--shadow-sm);
+    }
+
+    .breadcrumb a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+
+    .breadcrumb a:hover,
+    .breadcrumb a:focus{
+      text-decoration:underline;
+    }
+
+    .breadcrumb span{
+      color:var(--muted);
+    }
+
+    .partners-grid{
+      list-style:none;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:1rem;
+      margin-top:1rem;
+      padding:0;
+    }
+
+    .partner-link{
+      padding:1rem;
+      background:var(--light);
+      border-radius:var(--radius);
+      text-align:center;
+      color:var(--text);
+      text-decoration:none;
+      transition:var(--transition);
+      display:block;
+    }
+
+    .partner-link:hover{
+      background:#fff;
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-md);
+    }
+
+    @media (max-width:768px){
+      .header-container{
+        flex-direction:column;
+        text-align:center;
+      }
+      nav ul{
+        flex-direction:column;
+      }
+      .sticky-cta{
+        flex-direction:column;
+      }
+      .sticky-cta a{
+        max-width:100%;
+      }
+    }
+
+    @media print{
+      header,.sticky-cta,.language-selector,footer,nav,.breadcrumb,.skip-link{
+        display:none;
+      }
+      body{
+        background:#fff;
+        color:#000;
+      }
+      section{
+        box-shadow:none;
+        border:1px solid #ddd;
+      }
+    }
+    /* ============================================ */
+    /* ACCESSIBILITY FIXES */
+    /* ============================================ */
+
+    /* Контраст корекции */
+    .hero p {
+      color: #1f2937 !important;
+    }
+
+    section p[style*="color:var(--muted)"],
+    section p[style*="color:#6b7280"] {
+      color: #4b5563 !important;
+    }
+
+    .price-card p[style*="color:#666"] {
+      color: #374151 !important;
+    }
+
+    .breadcrumb span {
+      color: #4b5563 !important;
+    }
+
+    footer a {
+      color: #f3f4f6 !important;
+    }
+
+    footer p {
+      color: #e5e7eb !important;
+    }
+
+    /* Touch Targets Fix */
+    .language-selector button {
+      min-width: 48px !important;
+      min-height: 48px !important;
+      padding: 10px !important;
+      margin: 0 8px !important;
+    }
+
+    footer a[aria-label] {
+      min-width: 48px !important;
+      min-height: 48px !important;
+      padding: 12px !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    nav a {
+      min-height: 48px !important;
+      padding: 14px 16px !important;
+    }
+
+    .faq-item summary {
+      min-height: 48px !important;
+      padding: 14px 12px !important;
+    }
+
+    .dropdown-content a {
+      min-height: 48px !important;
+      padding: 14px 20px !important;
+    }
+
+    .area-card {
+      min-height: 80px !important;
+      padding: 16px !important;
+    }
+
+    .sticky-cta a {
+      min-height: 56px !important;
+      padding: 14px 20px !important;
+    }
+    </style>
     <style>
         :root {
             --primary: #FF7A00;
@@ -109,87 +836,169 @@
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.2rem, 3vw, 2rem);
-            font-weight: 800;
-        }
-        .header-cta {
-            background: var(--secondary);
-            color: white;
-            padding: 10px 16px;
-            border-radius: var(--radius);
-            text-decoration: none;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 44px;
-        }
-        .header-cta:hover { background: #218838; transform: translateY(-3px); }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
-        .language-selector {
-            text-align: center;
-            padding: 10px 0;
-            background: var(--dark);
-            margin-bottom: 20px;
-        }
-        .language-selector button {
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            margin: 0 5px;
-            width: 36px;
-            height: 36px;
-            transition: var(--transition);
-            min-width: 44px;
-            min-height: 44px;
-        }
-        .language-selector button:hover { transform: scale(1.1); }
-        .hero {
-            background: linear-gradient(135deg, #e6ffe6, #c8e6c9);
-            border: 3px solid var(--secondary);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-        }
-        .hero h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: clamp(1.8rem, 4vw, 2.8rem);
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 800;
-        }
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 15px 30px;
-            border-radius: var(--radius);
-            font-weight: 800;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin: 0.5rem;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-            min-height: 48px;
-        }
-        .btn-primary:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-        section {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 2rem 0;
-            box-shadow: var(--shadow-md);
-        }
+            <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+                "name": "Пътна Помощ Костинброд",
+                "url": "https://patna-pomosht-kostinbrod.bg/",
+                "logo": "https://patna-pomosht-kostinbrod.bg/images/logo.png"
+            },
+            {
+                "@type": "LocalBusiness",
+                "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#localbusiness",
+                "name": "Пътна помощ Сливница – Пътна Помощ Костинброд",
+                "parentOrganization": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+                "url": "https://patna-pomosht-kostinbrod.bg/slivnica.html",
+                "telephone": "+359877845569",
+                "priceRange": "€€",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "ул. Бяло море 16",
+                    "addressLocality": "Костинброд",
+                    "addressRegion": "София област",
+                    "postalCode": "2230",
+                    "addressCountry": "BG"
+                },
+                "areaServed": [
+                    { "@type": "Place", "name": "Сливница" },
+                    { "@type": "City", "name": "Костинброд" },
+                    { "@type": "City", "name": "Божурище" },
+                    { "@type": "City", "name": "Калотина" },
+                    { "@type": "City", "name": "Драгоман" }
+                ],
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                        "Monday","Tuesday","Wednesday","Thursday",
+                        "Friday","Saturday","Sunday"
+                    ],
+                    "opens": "00:00",
+                    "closes": "23:59"
+                },
+                "sameAs": [
+                    "https://www.facebook.com/patnapomoshtkostinbrod",
+                    "https://g.co/kgs/p32TnaT",
+                    "https://www.instagram.com/road_assistance_/",
+                    "https://www.tiktok.com/@patnapomoshtinbrod"
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "83"
+                }
+            },
+            {
+                "@type": "Service",
+                "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#service",
+                "name": "Пътна помощ и репатрак в Сливница",
+                "serviceType": "Roadside Assistance",
+                "provider": {
+                    "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#localbusiness"
+                },
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Сливница"
+                },
+                "availableChannel": {
+                    "@type": "ServiceChannel",
+                    "servicePhone": {
+                        "@type": "ContactPoint",
+                        "telephone": "+359877845569",
+                        "contactType": "customer service",
+                        "availableLanguage": "Bulgarian"
+                    }
+                },
+                "offers": {
+                    "@type": "AggregateOffer",
+                    "priceCurrency": "EUR",
+                    "lowPrice": "40",
+                    "highPrice": "520",
+                    "offerCount": 3,
+                    "availability": "https://schema.org/InStock"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#webpage",
+                "url": "https://patna-pomosht-kostinbrod.bg/slivnica.html",
+                "name": "🚨 Пътна помощ Сливница 24/7 | Репатрак и калкулатор цена",
+                "description": "Денонощна пътна помощ в Сливница. Бърза реакция 30–40 мин, репатрак, превоз на до 6 пътници и точна цена с онлайн калкулатор.",
+                "inLanguage": "bg-BG",
+                "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+                "about": {
+                    "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#localbusiness"
+                },
+                "primaryImageOfPage": {
+                    "@type": "ImageObject",
+                    "url": "https://patna-pomosht-kostinbrod.bg/images/memi2.jpg"
+                },
+                "breadcrumb": {
+                    "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#breadcrumb"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Колко бързо пристигате в Сливница?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Средно 30–40 минути в зависимост от трафика и локацията."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Работите ли 24/7 в Сливница?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да – денонощно обслужване 24/7 за всички аварии и репатрак услуги."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Мога ли да платя с карта (POS)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Да – приемаме плащане с POS терминал на място."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Колко пътници може да превозите?",
+                        "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Нашите автомобили могат да превозват до 6 пътници заедно с аварирания автомобил."
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://patna-pomosht-kostinbrod.bg/slivnica.html#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Начало",
+                        "item": "https://patna-pomosht-kostinbrod.bg/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Пътна помощ Сливница",
+                        "item": "https://patna-pomosht-kostinbrod.bg/slivnica.html"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
         section h2 {
             font-family: 'Montserrat', sans-serif;
             color: var(--primary);
@@ -387,7 +1196,7 @@
     "https://www.facebook.com/patnapomoshtkostinbrod",
     "https://g.co/kgs/p32TnaT",
     "https://www.instagram.com/road_assistance_/",
-    "https://www.tiktok.com/@patnapomoshtkostinbrod"
+    "https://www.tiktok.com/@patnapomoshtinbrod"
   ]
 }
 </script>
@@ -411,12 +1220,12 @@
         "@type": "ListItem",
         "position": 1,
         "name": "Начало",
-        "item": "https://patna-pomosht-kostinbrod.bg/"
+        "item": "https://patna-pomoshtinbrod.bg/"
       },{
         "@type": "ListItem",
         "position": 2,
         "name": "Сливница",
-        "item": "https://patna-pomosht-kostinbrod.bg/slivnica.html"
+        "item": "https://patna-pomoshtinbrod.bg/slivnica.html"
       }]
     }
     </script>

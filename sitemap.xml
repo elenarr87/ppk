@@ -4,79 +4,160 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Главна страница -->
+  <!-- Автоматично генериран sitemap - всички HTML файлове -->
+  <!-- Използвана дата на последна промяна: 2026-01-16 -->
+
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Калкулатор -->
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/index.amp.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/index.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/kalkulator.html</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Блог -->
+  <!-- Blog -->
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/blog/index.html</loc>
-    <lastmod>2025-12-29</lastmod>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/how-to-send-your-location-fast.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/roadside-assistance-prices-explained.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/what-to-do-after-a-car-accident.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/what-to-do-if-your-car-breaks-down.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html</loc>
+    <lastmod>2026-01-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Локационни страници -->
+  <!-- Location / Service pages -->
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/slivnica.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/kalotina.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/dragoman.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/bojurishte.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/petrohan.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/ginci.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/voluiak.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/magistralaevropa.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Многоезични версии -->
+  <!-- Multilingual pages -->
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/english.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/german.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/turk.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://patna-pomosht-kostinbrod.bg/rom.html</loc>
+    <lastmod>2026-01-16</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 

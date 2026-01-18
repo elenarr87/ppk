@@ -1,182 +1,302 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>???? ??????????? ???? ?? ????? � ????? ????? ??????????</title>
-    <meta name="description" content="?????? ?? ??????, ??????? ? ??????????? � ??? ?????? ?????? ?????? ????????? ??? ????? ?? ????? ?????. ?? 0877 845 569">
-    <meta name="keywords" content="????????? ????, ????? ?????, ???????? ????, ?????? ????, ??????????">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html">
-    <meta property="og:title" content="???? ??????????? ???? ?? ?????">
-    <meta property="og:description" content="?????? ?? ??????, ??????? ? ??????????? � ??? ?????? ?????? ?????? ?????????.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html">
-    <meta property="og:image" content="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        :root { --primary: #FF7A00; --primary-dark: #E55A2B; --secondary: #28a745; --dark: #1A1A2E; --light: #fff5f0; --text: #1A1A2E; --radius: 12px; --max-width: 900px; }
-        body { font-family: 'Inter', sans-serif; line-height: 1.7; background: linear-gradient(135deg, #fff5f0 0%, #ffe8dc 100%); color: var(--text); margin: 0; padding-bottom: 80px; }
-        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 16px; }
-        header { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
-        .header-container { display: flex; justify-content: space-between; align-items: center; }
-        header h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.15rem,3vw,1.8rem); font-weight: 800; color: #fff; margin: 0; }
-        .header-cta { background: var(--secondary); color: #fff; padding: 10px 16px; border-radius: 12px; font-weight: 700; text-decoration: none; }
-        article { background: white; padding: 2rem; border-radius: var(--radius); box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin: 20px 0; }
-        h1.title { font-family: 'Montserrat', sans-serif; color: var(--primary); font-size: 2rem; margin-bottom: 1rem; }
-        h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); margin-top: 2rem; }
-        .hero-img img { max-width: 100%; border-radius: var(--radius); margin: 1rem 0; }
-        .benefit-card { background: var(--light); padding: 1.5rem; border-radius: var(--radius); margin: 1rem 0; border-left: 4px solid var(--secondary); }
-        .benefit-card h3 { color: var(--secondary); margin-top: 0; }
-        .warning-card { background: #fff3e0; padding: 1.5rem; border-radius: var(--radius); margin: 1rem 0; border-left: 4px solid #ff9800; }
-        .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
-        .comparison > div { padding: 1rem; border-radius: var(--radius); }
-        .bad { background: #ffebee; }
-        .good { background: #e8f5e9; }
-        .cta-box { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 2rem 0; text-align: center; }
-        .cta-box h2 { color: #fff; }
-        .btn { display: inline-block; padding: 0.8rem 1.5rem; border-radius: 999px; font-weight: 700; text-decoration: none; margin: 0.5rem; }
-        .btn-primary { background: #fff; color: var(--primary); }
-        .btn-outline { border: 2px solid #fff; color: #fff; }
-        .faq details { margin-bottom: 1rem; padding: 1rem; background: var(--light); border-radius: var(--radius); }
-        .faq summary { cursor: pointer; font-weight: 700; color: var(--primary); }
-        .mobile-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--dark); padding: 0.5rem; display: flex; gap: 0.5rem; z-index: 1000; }
-        .mobile-cta-bar a { flex: 1; text-align: center; padding: 0.75rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
-        .mobile-cta-call { background: var(--primary); color: #fff; }
-        .mobile-cta-calc { background: #0b84ff; color: #fff; }
-        footer { background: var(--dark); color: #fff; padding: 2rem 1rem; text-align: center; }
-        footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
-        @media (max-width: 600px) { .comparison { grid-template-columns: 1fr; } }
-        @media (min-width: 768px) { .mobile-cta-bar { display: none; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Защо прозрачните цени са важни – Пътна Помощ Костинброд</title>
+  <meta name="description" content="Защо ясните и прозрачни цени при пътна помощ гарантират доверие, предотвратяват измами и улесняват вземането на решение. Примери и съвети. ☎️ 0877 845 569">
+  <meta name="keywords" content="прозрачни цени, пътна помощ, репатрак, тарифи, измами, доверие">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html">
+
+  <!-- Open Graph / Twitter (single set) -->
+  <meta property="og:title" content="Защо прозрачните цени са важни">
+  <meta property="og:description" content="Как ясните тарифи и откритата информация предпазват от измами и дават спокойствие при авария.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html">
+  <meta property="og:image" content="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Прозрачни цени на пътна помощ - Пътна Помощ Костинброд">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Защо прозрачните цени са важни">
+  <meta name="twitter:description" content="Как ясните тарифи и откритата информация предпазват от измами и дават спокойствие при авария.">
+  <meta name="twitter:image" content="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg">
+  <meta name="twitter:image:alt" content="Прозрачни цени на пътна помощ - Пътна Помощ Костинброд">
+
+  <!-- LCP preload -->
+  <link rel="preload" as="image" href="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg">
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --primary:#FF7A00; --primary-dark:#E55A2B; --secondary:#28a745;
+      --dark:#1A1A2E; --light:#fff5f0; --text:#1A1A2E;
+      --radius:12px; --max-width:900px; --transition:all .28s ease;
+    }
+    /* Skip link */
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:10000;}
+    .skip-link:focus{left:16px;top:16px;width:auto;height:auto;padding:10px 14px;background:#000;color:#fff;border-radius:6px;text-decoration:none;}
+
+    body{font-family:'Inter',sans-serif;line-height:1.7;background:linear-gradient(135deg,#fff5f0 0%,#ffe8dc 100%);color:var(--text);margin:0;padding-bottom:80px;}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 16px;}
+    header{background:linear-gradient(135deg,var(--primary),var(--primary-dark));padding:12px 0;position:sticky;top:0;z-index:1000;box-shadow:0 6px 22px rgba(0,0,0,0.08);}
+    .header-container{display:flex;justify-content:space-between;align-items:center;gap:12px;}
+    .site-title{font-family:'Montserrat',sans-serif;font-size:clamp(1.15rem,3vw,1.8rem);font-weight:800;color:#fff;margin:0;}
+    .header-cta{background:var(--secondary);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;}
+
+    main{margin-top:20px;}
+    article{background:#fff;padding:2rem;border-radius:var(--radius);box-shadow:0 4px 20px rgba(0,0,0,0.08);margin-bottom:2rem;}
+    h1.title{font-family:'Montserrat',sans-serif;color:var(--primary);font-size:2rem;margin-bottom:1rem;}
+    h2{font-family:'Montserrat',sans-serif;color:var(--primary);margin-top:2rem;}
+    .hero-img img{width:100%;height:auto;border-radius:var(--radius);display:block;margin:1rem 0;}
+    .benefit-card{background:var(--light);padding:1.25rem;border-radius:var(--radius);margin:1rem 0;border-left:4px solid var(--secondary);}
+    .benefit-card h3{color:var(--secondary);margin-top:0;}
+    .warning-card{background:#fff3e0;padding:1rem;border-radius:var(--radius);margin:1rem 0;border-left:4px solid #ff9800;}
+    .comparison{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1rem 0;}
+    .comparison > div{padding:1rem;border-radius:var(--radius);}
+    .bad{background:#ffebee;}
+    .good{background:#e8f5e9;}
+    .cta-box{background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;padding:1.25rem;border-radius:var(--radius);margin:2rem 0;text-align:center;}
+    .btn{display:inline-block;padding:0.8rem 1.5rem;border-radius:999px;font-weight:700;text-decoration:none;margin:0.5rem;transition:var(--transition);}
+    .btn-primary{background:#fff;color:var(--primary);}
+    .btn-outline{border:2px solid #fff;color:#fff;background:transparent;}
+    .faq details{margin-bottom:1rem;padding:1rem;background:var(--light);border-radius:var(--radius);}
+    .faq summary{cursor:pointer;font-weight:700;color:var(--primary);}
+    .mobile-cta-bar{position:fixed;bottom:0;left:0;right:0;background:var(--dark);padding:0.5rem;display:flex;gap:0.5rem;z-index:1000;}
+    .mobile-cta-bar a{flex:1;text-align:center;padding:0.75rem;border-radius:999px;font-weight:700;text-decoration:none;color:#fff;}
+    .mobile-cta-call{background:var(--primary);}
+    .mobile-cta-calc{background:#0b84ff;}
+    footer{background:var(--dark);color:#fff;padding:2rem 1rem;text-align:center;}
+    footer a{color:rgba(255,255,255,0.85);text-decoration:none;}
+    a:focus,button:focus,summary:focus{outline:3px solid rgba(255,122,0,.9);outline-offset:3px;}
+    @media(min-width:768px){.mobile-cta-bar{display:none}}
+  </style>
+
+  <!-- Combined structured data (Organization, WebSite, Blog, WebPage, Article, FAQ, Breadcrumb) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://patna-pomosht-kostinbrod.bg/#organization",
+        "name":"Пътна Помощ Костинброд",
+        "url":"https://patna-pomosht-kostinbrod.bg/",
+        "logo":"https://patna-pomosht-kostinbrod.bg/images/logo.png",
+        "sameAs":[
+          "https://www.facebook.com/patnapomoshtkostinbrod",
+          "https://g.co/kgs/p32TnaT",
+          "https://www.instagram.com/road_assistance_/",
+          "https://www.tiktok.com/@patnapomoshtkostinbrod"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://patna-pomosht-kostinbrod.bg/#website",
+        "url":"https://patna-pomosht-kostinbrod.bg/",
+        "name":"Пътна Помощ Костинброд",
+        "publisher":{"@id":"https://patna-pomosht-kostinbrod.bg/#organization"}
+      },
+      {
+        "@type":"Blog",
+        "@id":"https://patna-pomosht-kostinbrod.bg/blog/#blog",
+        "name":"Блог – Пътна Помощ Костинброд",
+        "url":"https://patna-pomosht-kostinbrod.bg/blog/",
+        "publisher":{"@id":"https://patna-pomosht-kostinbrod.bg/#organization"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#webpage",
+        "url":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html",
+        "name":"Защо прозрачните цени са важни",
+        "isPartOf":{"@id":"https://patna-pomosht-kostinbrod.bg/#website"},
+        "primaryImageOfPage":{"@type":"ImageObject","url":"https://patna-pomosht-kostinbrod.bg/images/kalk.jpg"},
+        "inLanguage":"bg-BG",
+        "about":{"@id":"https://patna-pomosht-kostinbrod.bg/#organization"},
+        "breadcrumb":{"@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#breadcrumb"}
+      },
+      {
+        "@type":"Article",
+        "@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#article",
+        "headline":"Защо прозрачните цени са важни",
+        "description":"Ясните и разбираеми цени при пътна помощ дават сигурност, предотвратяват злоупотреби и улесняват вземането на решение при авария.",
+        "image":"https://patna-pomosht-kostinbrod.bg/images/kalk.jpg",
+        "author":{"@type":"Organization","name":"Пътна Помощ Костинброд"},
+        "publisher":{"@id":"https://patna-pomosht-kostinbrod.bg/#organization"},
+        "datePublished":"2025-12-27",
+        "mainEntityOfPage":{"@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#webpage"}
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"Защо трябва да сравнявам цени?","acceptedAnswer":{"@type":"Answer","text":"Сравнението помага да откриете честни доставчици и да избегнете прекалено скъпи оферти или нелегитимни посредници."}},
+          {"@type":"Question","name":"Какво да търся в офертата?","acceptedAnswer":{"@type":"Answer","text":"Проверете дали офертата включва двупосочното разстояние, минимална такса, допълнителни услуги и нощни надбавки."}},
+          {"@type":"Question","name":"Могат ли да ме измамят при повикване на репатрак?","acceptedAnswer":{"@type":"Answer","text":"Да, ако не получите предварителна ориентировъчна цена или ако доставчикът добави скрити такси. Изберете фирма с ясни цени и публичен прайс-лист."}}
+        ]
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Начало","item":"https://patna-pomosht-kostinbrod.bg/"},
+          {"@type":"ListItem","position":2,"name":"Блог","item":"https://patna-pomosht-kostinbrod.bg/blog/"},
+          {"@type":"ListItem","position":3,"name":"Защо прозрачните цени са важни","item":"https://patna-pomosht-kostinbrod.bg/blog/why-transparent-pricing-matters.html"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <h1>????? ????? ??????????</h1>
-            <a href="tel:+359877845569" class="header-cta"><i class="fas fa-phone-alt"></i> ????? ??</a>
-        </div>
-    </header>
-    <main class="container">
-        <article>
-            <h1 class="title">?? ???? ??????????? ???? ?? ?????</h1>
-            <div class="hero-img">
-                <img src="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg" alt="????????? ???? ?? ????? ?????" loading="lazy">
-            </div>
-            <p><strong>??????:</strong> ?????? ????? ????? ?? ????? ?????, ?????????? ????, ????? ??????, ? ?? ?????? ?????????? ? ?????????? ?????. ??? ???? ??????????? ???? ?? ??????? ?????.</p>
+  <a class="skip-link" href="#main-content">Превключи към съдържанието</a>
 
-            <h2>????????? ? ????????????? ????</h2>
-            <p>?? ?????????, ? ?????? ?? ??????? ????? ??? ????????, ?????:</p>
-            <ul>
-                <li>? ????? "????????" ???? ?? ????????, ? ?? ????? ????? ????? ??????</li>
-                <li>? ??????? "??????" ????? ?? ???? ??? ?????</li>
-                <li>? ?????????? ? ??????, ?????? ?????, ?? ??? ? ???????????</li>
-                <li>? ????? ???? ??????????</li>
-            </ul>
-
-            <div class="warning-card">
-                <h3>?? ?????? ???????</h3>
-                <p>"?????? ?? ?? ????????, ?????? ?? 50 ????. ?????? ???????, ???????? 200 � ?? '????? ?????', '???????', '??????'... ??? ???????? ?? ?????."</p>
-                <p><em>� ??????, ???????? ??? ???</em></p>
-            </div>
-
-            <h2>??? ??? ?????? ?????? ????????</h2>
-
-            <div class="benefit-card">
-                <h3>? ?????? ??????????</h3>
-                <p>?????? ?????????? ??????? ??????? ???? ????? ?? ?? ???????. ????????? ??????????, ????? ? ?????????? ??????? ????.</p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>? ???????? ??????????</h3>
-                <p>?????? ???? ?????? ?? ??????????? ?? ?????. ???? ?????? ????? � ?????? ? ???????.</p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>? ???????????? ?? ????????</h3>
-                <p>?????? ?? ???????, ????????????? ?????? ????? ?? ???????. ??? ??? ???????????? ?????? � ??????? ?? ?????????????.</p>
-            </div>
-
-            <div class="benefit-card">
-                <h3>? ????????? ????</h3>
-                <p>??????, ????? ???????, ? ??????, ????? ???????. ??? ???????? ?? ?????.</p>
-            </div>
-
-            <h2>?????????: ??? vs. "???????"</h2>
-            <div class="comparison">
-                <div class="bad">
-                    <h3>? ??????????? ????????</h3>
-                    <ul>
-                        <li>"????? 50-60 ????"</li>
-                        <li>"?? ????? ?? ?????"</li>
-                        <li>"??? ???????????? ?????"</li>
-                        <li>??? ?????????? ?? ?????</li>
-                        <li>??????? ????: 150+ ??</li>
-                    </ul>
-                </div>
-                <div class="good">
-                    <h3>? ????? ????? ??????????</h3>
-                    <ul>
-                        <li>"?????? ? ????? 78 ??"</li>
-                        <li>?????????? ?? ?????</li>
-                        <li>?????? ????? ?? ???????</li>
-                        <li>???????? ??????????</li>
-                        <li>??????? ????: 78 ??</li>
-                    </ul>
-                </div>
-            </div>
-
-            <h2>??????? ?? ???</h2>
-            <ul>
-                <li><strong>???????????</strong> � ?????? ????? ?? ??????? ????? ????????</li>
-                <li><strong>?????????</strong> � ?????? ?? ????????? ???? ?? ???????? ????????</li>
-                <li><strong>???????</strong> � ???????? ? ?????? ????????</li>
-                <li><strong>??? ?????</strong> � ???? ????????? ????????</li>
-            </ul>
-
-            <div class="cta-box">
-                <h2>?????? ?? ?????? ?????? ?? ????? ???????</h2>
-                <p>??????????? ??????????? � ????????? ? ??? ??????????!</p>
-                <a class="btn btn-primary" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html">?? ??????????</a>
-                <a class="btn btn-outline" href="tel:+359877845569">?? 0877 845 569</a>
-            </div>
-
-            <section class="faq">
-                <h2>????? ???????? ???????</h2>
-                <details>
-                    <summary>?????? ?? ??????????? ??????? ?? ??</summary>
-                    <p>??, ????? ??? ?? ?? ??????? ???????????? ?????? (????. ???????), ????? ?? ??????? ? ???????????. ?????? ????????????? ???????? ???? ?? ????????.</p>
-                </details>
-                <details>
-                    <summary>????? ??? ?????? ?? ????? ? ?????????</summary>
-                    <p>??? ??? ?????? ???? ?? ???????? � ?? ????. ???????? ???? ???? ?? ??? ???? ??? ?????????? ? ???????? ?? ????????? (????. ??????????? ? ? ???????, ? ?? ?? ????).</p>
-                </details>
-                <details>
-                    <summary>???? ?? ?? ???????</summary>
-                    <p>????? 83+ ?????? ? Google ? ??????? 5.0?. ????????? ????? ?????? ?????? ???????!</p>
-                </details>
-            </section>
-
-            <h2>???????? ??????</h2>
-            <ul>
-                <li><a href="roadside-assistance-prices-explained.html">???? ?? ????? ????? � ???????? ?????????</a></li>
-                <li><a href="how-to-choose-a-tow-truck.html">??? ?? ???????? ????????? ????????</a></li>
-                <li><a href="what-to-do-if-your-car-breaks-down.html">????? ?? ??????? ??? ???????</a></li>
-            </ul>
-        </article>
-    </main>
-    <div class="mobile-cta-bar">
-        <a class="mobile-cta-call" href="tel:+359877845569">?? ????? ??</a>
-        <a class="mobile-cta-calc" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html">?? ??????????</a>
+  <header>
+    <div class="container header-container">
+      <div class="site-title" aria-hidden="true">Пътна Помощ Костинброд</div>
+      <a href="tel:+359877845569" class="header-cta" aria-label="Обади се"><i class="fas fa-phone-alt" aria-hidden="true"></i> Обади се</a>
     </div>
-    <footer>
-        <div class="container">
-            <p><strong>"??????????? ???? ??????" ????</strong></p>
-            <p>??. ???? ???? 16, ?????????? 2230</p>
-            <p><a href="tel:+359877845569">+359 877 845 569</a></p>
-            <p style="margin-top:1rem">� 2021 - 2025 ?????? ????? ????????.</p>
+  </header>
+
+  <main class="container" id="main-content" role="main" aria-label="Статия: Защо прозрачните цени са важни">
+    <article>
+      <h1 class="title">Защо прозрачните цени са важни</h1>
+
+      <div class="hero-img">
+        <img src="https://patna-pomosht-kostinbrod.bg/images/kalk.jpg"
+             srcset="/images/kalk-480.jpg 480w, /images/kalk-800.jpg 800w, /images/kalk-1200.jpg 1200w"
+             sizes="(max-width:600px)100vw, (max-width:900px)70vw, 900px"
+             alt="Прозрачни цени на пътна помощ"
+             loading="lazy" width="1200" height="800">
+      </div>
+
+      <p><strong>Резюме:</strong> Ясната ценова политика дава спокойствие на клиента, намалява риска от недоразумения и прави пазара по-справедлив. В статията обясняваме основните ползи, какво да търсите и примери за реални ситуации.</p>
+
+      <h2>Ползи от прозрачните цени</h2>
+      <div class="benefit-card">
+        <h3>Доверие</h3>
+        <p>Клиентът вижда какво плаща и за какво — това изгражда доверие и дългосрочни отношения.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>Намаляване на измами</h3>
+        <p>Ясни тарифни условия и примерни изчисления помагат да се избегнат скрити такси и некоректни практики.</p>
+      </div>
+
+      <div class="benefit-card">
+        <h3>По-бързо вземане на решение</h3>
+        <p>Когато цените са публикувани, клиентите могат да преценят и да действат по-бързо в стресова ситуация.</p>
+      </div>
+
+      <h2>Сравнение: Нечестни оферти vs. Прозрачни оферти</h2>
+      <div class="comparison" role="table" aria-label="Сравнение на оферти">
+        <div class="bad" role="cell">
+          <h3>Нечестни оферти</h3>
+          <ul>
+            <li>Отсъствие на прайс-лист</li>
+            <li>Неясни минимални такси</li>
+            <li>Скрити добавки след пристигане</li>
+          </ul>
         </div>
-    </footer>
+        <div class="good" role="cell">
+          <h3>Прозрачни оферти</h3>
+          <ul>
+            <li>Публичен прайс-лист</li>
+            <li>Пресметнати примери (km × цена)</li>
+            <li>Отчетливи условия за допълнителни услуги</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Какво да търсите в офертата</h2>
+      <ul>
+        <li>Цена/км и минимална такса</li>
+        <li>Нощни надбавки и условия за извънредни ситуации</li>
+        <li>Такси за допълнителни услуги (лебедка, блокирали колела и т.н.)</li>
+        <li>Прозрачни контакти и регистрационни данни на фирмата</li>
+      </ul>
+
+      <div class="warning-card" role="note" aria-label="Предупреждение">
+        <h3>Внимание при „твърде добри” оферти</h3>
+        <p>Ако цената изглежда необичайно ниска спрямо стандартните тарифи, поискайте подробна разбивка — често ниската начална цена крие скрити такси.</p>
+      </div>
+
+      <div class="cta-box" role="region" aria-label="Калкулатор и контакт">
+        <h2>Искате примерна калкулация?</h2>
+        <p>Използвайте нашия калкулатор или се обадете — ще ви дадем ориентировъчна цена веднага.</p>
+        <a class="btn btn-primary" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html" rel="noopener noreferrer">Изчисли цена</a>
+        <a class="btn btn-outline" href="tel:+359877845569">0877 845 569</a>
+      </div>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Често задавани въпроси</h2>
+        <details>
+          <summary>Как да разбера дали офертата е честна?</summary>
+          <p>Поискайте детайлна разбивка: минимална такса, цена/км, разходи за допълнителни операции и евентуални надбавки (нощ, трудност на изпълнение).</p>
+        </details>
+        <details>
+          <summary>Какво включва минималната такса?</summary>
+          <p>Минималната такса покрива идването до мястото и базовите разходи — ако изчислената цена (по км) е по-ниска, се взема минималната такса.</p>
+        </details>
+        <details>
+          <summary>Мога ли да поискам оферта по телефона?</summary>
+          <p>Да — при повикване предоставете марка, модел, проблем и локация; ще получите ориентировъчна цена и информация за допълнителни услуги.</p>
+        </details>
+      </section>
+
+      <h2>Свързани статии</h2>
+      <ul>
+        <li><a href="how-to-choose-a-tow-truck.html" rel="noopener noreferrer">Как да изберете правилния репатрак</a></li>
+        <li><a href="roadside-assistance-prices-explained.html" rel="noopener noreferrer">Цени на пътна помощ – подробно обяснение</a></li>
+        <li><a href="what-to-do-if-your-car-breaks-down.html" rel="noopener noreferrer">Какво да правите при повреда на пътя</a></li>
+      </ul>
+    </article>
+  </main>
+
+  <div class="mobile-cta-bar" role="navigation" aria-label="Бързи действия">
+    <a class="mobile-cta-call" href="tel:+359877845569" aria-label="Обади се">📞 Обади се</a>
+    <a class="mobile-cta-calc" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html" rel="noopener noreferrer" aria-label="Калкулатор">🧾 Калкулатор</a>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p><strong>"Транспортер Иван Иванов" ЕООД</strong></p>
+      <p>ул. Бяло море 16, Костинброд 2230</p>
+      <p><a href="tel:+359877845569">+359 877 845 569</a></p>
+      <p style="margin-top:1rem">© 2021 - 2025 Пътна Помощ Костинброд. Всички права запазени.</p>
+    </div>
+  </footer>
+
+  <!-- ARIA live region for optional JS feedback -->
+  <div id="status" aria-live="polite" style="position:fixed;left:-9999px;top:auto;height:1px;width:1px;overflow:hidden;"></div>
+
+  <script>
+    // Optional: attach sendLocation to elements with data-send-location if needed elsewhere
+    async function sendLocation() {
+      const phone = '+359877845569';
+      const statusEl = document.getElementById('status');
+      function showStatus(m){ if(statusEl) statusEl.textContent = m; }
+      if(!navigator.geolocation){ showStatus("Моля позвънете: " + phone); alert("Моля позвънете: " + phone); return; }
+      navigator.geolocation.getCurrentPosition(async pos=>{
+        const lat=pos.coords.latitude, lng=pos.coords.longitude;
+        const message=`Локация: https://maps.google.com/?q=${lat},${lng}`;
+        if(navigator.share){ try{ await navigator.share({ text: message }); showStatus("Споделено"); return;}catch(e){} }
+        // Try SMS / WhatsApp deep links; fallback to clipboard
+        try{ window.location.href = `whatsapp://send?text=${encodeURIComponent(message)}`; return; }catch(e){}
+        try{ window.location.href = `sms:+359877845569?body=${encodeURIComponent(message)}`; return; }catch(e){}
+        if(navigator.clipboard){ try{ await navigator.clipboard.writeText(message); alert("Локацията е копирана в клипборда. Изпратете я на: " + phone); return; }catch(e){} }
+        alert(message);
+      }, ()=>{ alert("Грешка при получаване на локация. Моля позвънете: " + phone); }, { enableHighAccuracy:true, timeout:10000 });
+    }
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('[data-send-location]');
+      if(btn){ e.preventDefault(); sendLocation(); }
+    });
+  </script>
 </body>
 </html>

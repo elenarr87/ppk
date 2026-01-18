@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Как да изберете правилния репатрак – Пътна Помощ Костинброд</title>
     <meta name="description" content="Как да изберете репатрак според тегло, повреда и разстояние. Практично ръководство с цени, грешки и FAQ. ☎️ 0877 845 569">
     <meta name="keywords" content="избор на репатрак, пътна помощ, репатрак цени, авария на пътя, транспорт на автомобили, Костинброд, Божурище, Драгоман">
     <meta name="robots" content="index,follow">
     <link rel="canonical" href="https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html">
+
+    <!-- Open Graph / Twitter (single set) -->
     <meta property="og:title" content="Как да изберете правилния репатрак">
     <meta property="og:description" content="Разберете как да изберете подходящ репатрак според тегло, повреда, разстояние и безопасност.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html">
     <meta property="og:image" content="https://patna-pomosht-kostinbrod.bg/images/memi20.jpg">
-    <meta property="article:published_time" content="2025-12-27">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Избор на репатрак - Пътна помощ Костинброд">
+
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Как да изберете правилния репатрак">
     <meta name="twitter:description" content="Практично ръководство за избор на репатрак според тегло, повреда и разстояние.">
     <meta name="twitter:image" content="https://patna-pomosht-kostinbrod.bg/images/memi20.jpg">
+    <meta name="twitter:image:alt" content="Избор на репатрак - Пътна помощ Костинброд">
+
+    <!-- LCP preload -->
+    <link rel="preload" as="image" href="https://patna-pomosht-kostinbrod.bg/images/memi20.jpg">
+
+    <!-- Fonts & icons -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         :root {
             --primary: #FF7A00;
@@ -33,6 +45,28 @@
             --transition: all .28s ease;
             --max-width: 900px;
         }
+        /* Skip link for keyboard users */
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            z-index: 10000;
+        }
+        .skip-link:focus {
+            left: 16px;
+            top: 16px;
+            width: auto;
+            height: auto;
+            padding: 10px 14px;
+            background: #000;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.7;
@@ -51,7 +85,8 @@
             box-shadow: 0 6px 22px rgba(0,0,0,0.12);
         }
         .header-container { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
-        header h1 { font-family: 'Montserrat', sans-serif; font-size: clamp(1.15rem,3vw,1.8rem); font-weight: 800; color: #fff; margin: 0; }
+        /* header site title changed to non-H1 so article H1 remains main heading */
+        .site-title { font-family: 'Montserrat', sans-serif; font-size: clamp(1.15rem,3vw,1.8rem); font-weight: 800; color: #fff; margin: 0; }
         .header-cta { background: var(--secondary); color: #fff; padding: 10px 16px; border-radius: 12px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
         main { margin-top: 20px; }
         article { background: white; padding: 2rem; border-radius: var(--radius); box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 2rem; }
@@ -59,7 +94,7 @@
         h2 { font-family: 'Montserrat', sans-serif; color: var(--primary); margin-top: 2rem; }
         ul { padding-left: 1.5rem; }
         li { margin-bottom: 0.5rem; }
-        .hero-img img { max-width: 100%; border-radius: var(--radius); margin: 1rem 0; }
+        .hero-img img { width: 100%; height: auto; border-radius: var(--radius); margin: 1rem 0; display: block; }
         .cta-box { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; padding: 1.5rem; border-radius: var(--radius); margin: 2rem 0; text-align: center; }
         .cta-box h2 { color: #fff; margin-bottom: 1rem; }
         .btn { display: inline-block; padding: 0.8rem 1.5rem; border-radius: 999px; font-weight: 700; text-decoration: none; margin: 0.5rem; transition: var(--transition); }
@@ -69,51 +104,136 @@
         .faq details { margin-bottom: 1rem; padding: 1rem; background: var(--light); border-radius: var(--radius); }
         .faq summary { cursor: pointer; font-weight: 700; color: var(--primary); }
         .mobile-cta-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--dark); padding: 0.5rem; display: flex; gap: 0.5rem; z-index: 1000; }
-        .mobile-cta-bar a { flex: 1; text-align: center; padding: 0.75rem; border-radius: 999px; font-weight: 700; text-decoration: none; }
-        .mobile-cta-call { background: var(--primary); color: #fff; }
-        .mobile-cta-location { border: 2px solid #fff; color: #fff; }
+        .mobile-cta-bar a { flex: 1; text-align: center; padding: 0.75rem; border-radius: 999px; font-weight: 700; text-decoration: none; color: #fff; }
+        .mobile-cta-call { background: var(--primary); }
+        .mobile-cta-location { border: 2px solid #fff; }
         footer { background: var(--dark); color: #fff; padding: 2rem 1rem; margin-top: 2rem; text-align: center; }
         footer a { color: rgba(255,255,255,0.8); text-decoration: none; }
+
+        /* focus outlines for accessibility */
+        a:focus, button:focus, summary:focus {
+            outline: 3px solid rgba(255,122,0,.9);
+            outline-offset: 3px;
+        }
+
         @media (min-width: 768px) { .mobile-cta-bar { display: none; } }
     </style>
+
+    <!-- Combined JSON-LD: Organization, WebSite, Blog, Article (this page), Breadcrumb, FAQ -->
     <script type="application/ld+json">
     {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "Как да изберете правилния репатрак",
-        "description": "Научете как да изберете правилния репатрак според тегло, повреда, разстояние и безопасност.",
-        "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg",
-        "author": { "@type": "Organization", "name": "Пътна Помощ Костинброд" },
-        "publisher": { "@type": "Organization", "name": "Пътна Помощ Костинброд" },
-        "datePublished": "2025-12-27",
-        "url": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+          "name": "Пътна Помощ Костинброд",
+          "url": "https://patna-pomosht-kostinbrod.bg/",
+          "logo": "https://patna-pomosht-kostinbrod.bg/images/logo.png",
+          "sameAs": [
+            "https://www.facebook.com/patnapomoshtkostinbrod",
+            "https://g.co/kgs/p32TnaT",
+            "https://www.instagram.com/road_assistance_/",
+            "https://www.tiktok.com/@patnapomoshtkostinbrod"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://patna-pomosht-kostinbrod.bg/#website",
+          "url": "https://patna-pomosht-kostinbrod.bg/",
+          "name": "Пътна Помощ Костинброд",
+          "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" }
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://patna-pomosht-kostinbrod.bg/blog/#blog",
+          "name": "Блог – Пътна Помощ Костинброд",
+          "url": "https://patna-pomosht-kostinbrod.bg/blog/",
+          "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#webpage",
+          "url": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html",
+          "name": "Как да изберете правилния репатрак",
+          "isPartOf": { "@id": "https://patna-pomosht-kostinbrod.bg/#website" },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg"
+          },
+          "inLanguage": "bg-BG",
+          "about": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+          "breadcrumb": { "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#breadcrumb" }
+        },
+        {
+          "@type": "Article",
+          "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#article",
+          "headline": "Как да изберете правилния репатрак",
+          "description": "Научете как да изберете правилния репатрак според тегло, повреда, разстояние и безопасност.",
+          "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg",
+          "author": { "@type": "Organization", "name": "Пътна Помощ Костинброд" },
+          "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+          "datePublished": "2025-12-27",
+          "mainEntityOfPage": { "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#webpage" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Как да разбера какъв репатрак ми трябва?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Посочете теглото и вида на повредата; ние ще изпратим подходящата техника." }
+            },
+            {
+              "@type": "Question",
+              "name": "Каква информация да дам при обаждане?",
+              "acceptedAnswer": { "@type": "Answer", "text": "Марка, модел, тегло, повреда и локация за точна оферта." }
+            },
+            {
+              "@type": "Question",
+              "name": "Кога е нужен специализиран репатрак?",
+              "acceptedAnswer": { "@type": "Answer", "text": "При катастрофи или тежки автомобили за безопасна работа." }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html#breadcrumb",
+          "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://patna-pomosht-kostinbrod.bg/" },
             { "@type": "ListItem", "position": 2, "name": "Блог", "item": "https://patna-pomosht-kostinbrod.bg/blog/" },
             { "@type": "ListItem", "position": 3, "name": "Как да изберете правилния репатрак", "item": "https://patna-pomosht-kostinbrod.bg/blog/how-to-choose-a-tow-truck.html" }
-        ]
+          ]
+        }
+      ]
     }
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#article-content">Превключи към съдържанието</a>
+
     <header>
         <div class="container header-container">
-            <h1>Пътна Помощ Костинброд</h1>
-            <a href="tel:+359877845569" class="header-cta"><i class="fas fa-phone-alt"></i> Обади се</a>
+            <div class="site-title" aria-hidden="true">Пътна Помощ Костинброд</div>
+            <a href="tel:+359877845569" class="header-cta" aria-label="Обадете се на Пътна помощ"> <i class="fas fa-phone-alt" aria-hidden="true"></i> Обади се</a>
         </div>
     </header>
-    <main class="container">
+
+    <main class="container" id="article-content" role="main" aria-label="Статия: Как да изберете правилния репатрак">
         <article>
             <h1 class="title">🚛 Как да изберете правилния репатрак</h1>
+
             <div class="hero-img">
-                <img src="https://patna-pomosht-kostinbrod.bg/images/memi20.jpg" alt="Избор на репатрак според автомобила" loading="lazy">
+                <!-- responsive srcset for better performance -->
+                <img
+                    src="https://patna-pomosht-kostinbrod.bg/images/memi20.jpg"
+                    srcset="/images/memi20-480.jpg 480w, /images/memi20-800.jpg 800w, /images/memi20-1200.jpg 1200w"
+                    sizes="(max-width:600px)100vw, (max-width:900px)70vw, 900px"
+                    alt="Избор на репатрак според автомобила"
+                    loading="lazy" width="1200" height="762">
             </div>
+
             <p><strong>Резюме:</strong> Изборът на репатрак зависи от тегло на автомобила, вид повреда, разстояние и безопасност. Тук ще намерите подробно ръководство, примери, честите грешки и практически съвети за шофьори.</p>
 
             <h2>1. Определете теглото на автомобила</h2>
@@ -135,14 +255,14 @@
 
             <h2>3. Има ли кука за теглене?</h2>
             <p>Куката е задължителна за безопасно теглене. Ако липсва или е повредена, репатракът ще използва допълнителни средства.</p>
-            <p><strong>Такса за липсваща кука:</strong> 5 EUR (9.78 лв).</p>
+            <p><strong>Такса за липсваща кука:</strong> 5 EUR (≈9.78 лв).</p>
 
             <h2>4. Колко е разстоянието?</h2>
             <p>Цената се изчислява по двупосочно разстояние: идване до вас + превоз до сервиз.</p>
             <h3>Тарифи:</h3>
             <ul>
                 <li><strong>МПС до 1500 кг:</strong> 0.75 EUR/км, минимум 40 EUR</li>
-                <li><strong>МПС 1500–2000 кг:</strong> 0.85 EUR/км, минимум 45 EUR</li>
+                <li><strong>МПС 1500���2000 кг:</strong> 0.85 EUR/км, минимум 45 EUR</li>
                 <li><strong>МПС над 2000 кг:</strong> 0.95 EUR/км, минимум 50 EUR</li>
             </ul>
 
@@ -157,15 +277,15 @@
                 <li><strong>Изваждане от канавка:</strong> 75 EUR</li>
             </ul>
 
-            <div class="cta-box">
+            <div class="cta-box" role="region" aria-label="Помощ и калкулатор">
                 <h2>Не сте сигурни кой репатрак ви трябва?</h2>
                 <p>Обадете ни се – ще ви насочим според ситуацията и автомобила.</p>
-                <a class="btn btn-primary" href="tel:+359877845569">📞 Обади ни се сега</a>
-                <a class="btn btn-outline" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html">💰 Изчисли цена</a>
+                <a class="btn btn-primary" href="tel:+359877845569" aria-label="Обадете се на Пътна помощ">📞 Обади ни се сега</a>
+                <a class="btn btn-outline" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html" rel="noopener noreferrer">💰 Изчисли цена</a>
             </div>
 
-            <section class="faq">
-                <h2>Често задавани въпроси</h2>
+            <section class="faq" aria-labelledby="faq-title">
+                <h2 id="faq-title">Често задавани въпроси</h2>
                 <details>
                     <summary>Как да разбера какъв репатрак ми трябва?</summary>
                     <p>Посочете теглото и вида на повредата; ние ще изпратим подходящата техника.</p>
@@ -186,17 +306,19 @@
 
             <h2>Свързани статии</h2>
             <ul>
-                <li><a href="what-to-do-if-your-car-breaks-down.html">Какво да правите при повреда</a></li>
-                <li><a href="how-to-send-your-location-fast.html">Как да изпратите локацията си бързо</a></li>
-                <li><a href="roadside-assistance-prices-explained.html">Цени на пътна помощ</a></li>
-                <li><a href="why-transparent-pricing-matters.html">Защо прозрачните цени са важни</a></li>
+                <li><a href="what-to-do-if-your-car-breaks-down.html" rel="noopener noreferrer">Какво да правите при повреда</a></li>
+                <li><a href="how-to-send-your-location-fast.html" rel="noopener noreferrer">Как да изпратите локацията си бързо</a></li>
+                <li><a href="roadside-assistance-prices-explained.html" rel="noopener noreferrer">Цени на пътна помощ</a></li>
+                <li><a href="why-transparent-pricing-matters.html" rel="noopener noreferrer">Защо прозрачните цени са важни</a></li>
             </ul>
         </article>
     </main>
-    <div class="mobile-cta-bar">
-        <a class="mobile-cta-call" href="tel:+359877845569">📞 Обади се</a>
-        <a class="mobile-cta-location" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html">📍 Калкулатор</a>
+
+    <div class="mobile-cta-bar" role="navigation" aria-label="Бързи действия">
+        <a class="mobile-cta-call" href="tel:+359877845569" aria-label="Обади се">📞 Обади се</a>
+        <a class="mobile-cta-location" href="https://patna-pomosht-kostinbrod.bg/kalkulator.html" rel="noopener noreferrer" aria-label="Калкулатор">📍 Калкулатор</a>
     </div>
+
     <footer>
         <div class="container">
             <p><strong>"Транспортер Иван Иванов" ЕООД</strong></p>

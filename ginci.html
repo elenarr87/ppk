@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="bg" itemscope itemtype="https://schema.org/LocalBusiness">
+<html lang="bg" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -339,87 +339,130 @@
         gtag('js', new Date());
         gtag('config', 'G-WN9QE79LPZ', { anonymize_ip: true });
     </script>
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Пътна Помощ Костинброд - Транспортер Иван Иванов ЕООД",
-  "image": "https://patna-pomosht-kostinbrod.bg/images/memi20.jpg",
-  "telephone": "+359877845569",
-  "email": "lind_2003@abv.bg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Бяло море 16",
-    "addressLocality": "Костинброд",
-    "postalCode": "2230",
-    "addressCountry": "BG"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 42.8130,
-    "longitude": 23.2154
-  },
-  "priceRange": "€",
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
-  }],
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": 5.0,
-    "reviewCount": 75
-  },
-  "areaServed": [
-    {"@type":"City","name":"Костинброд"},
-    {"@type":"City","name":"Сливница"},
-    {"@type":"City","name":"Калотина"},
-    {"@type":"City","name":"Драгоман"},
-    {"@type":"City","name":"Петрохан"},
-    {"@type":"City","name":"Божурище"},
-    {"@type":"City","name":"Гинци"},
-    {"@type":"City","name":"Волуяк"}
-  ],
-  "url": "https://patna-pomosht-kostinbrod.bg/ginci.html",
-  "sameAs": [
-    "https://www.facebook.com/patnapomoshtkostinbrod",
-    "https://g.co/kgs/p32TnaT",
-    "https://www.instagram.com/road_assistance_/",
-    "https://www.tiktok.com/@patnapomoshtkostinbrod"
-  ]
-}
-</script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {"@type": "Question","name": "Колко бързо пристигате в Гинци?","acceptedAnswer": {"@type": "Answer","text": "Средно 30-40 минути, в зависимост от трафика и локацията."}},
-        {"@type": "Question","name": "Работите ли 24/7 в Гинци?","acceptedAnswer": {"@type": "Answer","text": "Да – денонощно обслужване 24/7 за всички аварии и репатрак услуги."}},
-        {"@type": "Question","name": "Мога ли да платя с карта (POS)?","acceptedAnswer": {"@type": "Answer","text": "Да – приемаме плащане с POS терминал на място."}},
-        {"@type": "Question","name": "Колко пътници може да превозите?","acceptedAnswer": {"@type": "Answer","text": "Нашите автомобили могат да превозват до 6 пътници заедно с аварирания автомобил."}}
-      ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Начало",
-        "item": "https://patna-pomosht-kostinbrod.bg/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Гинци",
-        "item": "https://patna-pomosht-kostinbrod.bg/ginci.html"
-      }]
-    }
-    </script>
+        <!-- Unified JSON-LD @graph: Organization + LocalBusiness + Service + WebPage + FAQ + Breadcrumb -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/#organization",
+                    "name": "Пътна Помощ Костинброд",
+                    "url": "https://patna-pomosht-kostinbrod.bg/",
+                    "logo": "https://patna-pomosht-kostinbrod.bg/images/logo.png",
+                    "sameAs": [
+                        "https://www.facebook.com/patnapomoshtkostinbrod",
+                        "https://g.co/kgs/p32TnaT",
+                        "https://www.instagram.com/road_assistance_/",
+                        "https://www.tiktok.com/@patnapomoshtinbrod"
+                    ],
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "reviewCount": "83"
+                    }
+                },
+                {
+                    "@type": "LocalBusiness",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#localbusiness",
+                    "name": "Пътна помощ Гинци – Пътна Помощ Костинброд",
+                    "parentOrganization": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+                    "url": "https://patna-pomosht-kostinbrod.bg/ginci.html",
+                    "telephone": "+359877845569",
+                    "priceRange": "€€",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "ул. Бяло море 16",
+                        "addressLocality": "Костинброд",
+                        "addressRegion": "София област",
+                        "postalCode": "2230",
+                        "addressCountry": "BG"
+                    },
+                    "areaServed": [
+                        { "@type": "Place", "name": "Гинци" },
+                        { "@type": "City", "name": "Петрохан" },
+                        { "@type": "City", "name": "Драгоман" },
+                        { "@type": "City", "name": "Костинброд" }
+                    ],
+                    "openingHoursSpecification": {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                        "opens": "00:00",
+                        "closes": "23:59"
+                    },
+                    "sameAs": [
+                        "https://www.facebook.com/patnapomoshtkostinbrod",
+                        "https://g.co/kgs/p32TnaT",
+                        "https://www.instagram.com/road_assistance_/",
+                        "https://www.tiktok.com/@patnapomoshtinbrod"
+                    ],
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "reviewCount": "83"
+                    }
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#service",
+                    "name": "Пътна помощ и репатрак в Гинци",
+                    "serviceType": "Roadside Assistance",
+                    "provider": { "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#localbusiness" },
+                    "areaServed": { "@type": "Place", "name": "Гинци" },
+                    "availableChannel": {
+                        "@type": "ServiceChannel",
+                        "servicePhone": {
+                            "@type": "ContactPoint",
+                            "telephone": "+359877845569",
+                            "contactType": "customer service",
+                            "availableLanguage": ["Bulgarian"]
+                        }
+                    },
+                    "offers": {
+                        "@type": "AggregateOffer",
+                        "availability": "https://schema.org/InStock",
+                        "priceCurrency": "EUR",
+                        "lowPrice": "40",
+                        "highPrice": "95",
+                        "offerCount": 3
+                    }
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#webpage",
+                    "url": "https://patna-pomosht-kostinbrod.bg/ginci.html",
+                    "name": "Пътна Помощ Гинци 24/7",
+                    "description": "Денонощна пътна помощ Гинци с бърза реакция 30-40 мин и онлайн калкулатор за точна цена",
+                    "inLanguage": "bg-BG",
+                    "publisher": { "@id": "https://patna-pomosht-kostinbrod.bg/#organization" },
+                    "about": { "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#localbusiness" },
+                    "primaryImageOfPage": {
+                        "@type": "ImageObject",
+                        "url": "https://patna-pomosht-kostinbrod.bg/images/memi2.jpg"
+                    },
+                    "breadcrumb": { "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#breadcrumb" }
+                },
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#faq",
+                    "mainEntity": [
+                        { "@type": "Question", "name": "Колко бързо пристигате в Гинци?", "acceptedAnswer": { "@type": "Answer", "text": "Средно 30-40 минути в зависимост от трафика и точното местоположение." } },
+                        { "@type": "Question", "name": "Работите ли денонощно в Гинци?", "acceptedAnswer": { "@type": "Answer", "text": "Да – 24/7, 365 дни в годината." } },
+                        { "@type": "Question", "name": "Мога ли да платя с карта?", "acceptedAnswer": { "@type": "Answer", "text": "Да – разполагаме с POS терминал на място." } },
+                        { "@type": "Question", "name": "Колко пътници превозвате?", "acceptedAnswer": { "@type": "Answer", "text": "До 6 пътници заедно с авариралия автомобил." } }
+                    ]
+                },
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://patna-pomosht-kostinbrod.bg/ginci.html#breadcrumb",
+                    "itemListElement": [
+                        { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://patna-pomosht-kostinbrod.bg/" },
+                        { "@type": "ListItem", "position": 2, "name": "Гинци", "item": "https://patna-pomosht-kostinbrod.bg/ginci.html" }
+                    ]
+                }
+            ]
+        }
+        </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Премини към основното съдържание</a>
