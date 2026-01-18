@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1' # every Monday at 06:00 UTC
 
 jobs:
   run-audit:
@@ -38,3 +40,39 @@ jobs:
         with:
           name: seo-reports
           path: reports
+
+      - name: Comment summary on PR (only on PR runs)
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = './reports/seo_report.json';
+            let body = '### SEO Audit summary\n\n';
+            if (fs.existsSync(path)) {
+              try {
+                const data = JSON.parse(fs.readFileSync(path, 'utf8'));
+                const pagesCount = Array.isArray(data.pages) ? data.pages.length : 'n/a';
+                let jsonLdCount = 0;
+                if (Array.isArray(data.pages)) {
+                  for (const p of data.pages) {
+                    if (p.meta && typeof p.meta.json_ld_count === 'number') jsonLdCount += p.meta.json_ld_count;
+                  }
+                }
+                body += `- Pages scanned: ${pagesCount}\n`;
+                body += `- JSON-LD blocks found (sum): ${jsonLdCount}\n`;
+                const artifactUrl = `${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}/artifacts`;
+                body += `- Artifacts: [seo-reports.zip](${artifactUrl})\n\n`;
+                body += 'If you want specific suggestions (titles/descriptions, hreflang fixes, or image checks) I can generate them in a follow-up.\n';
+              } catch (e) {
+                body += `- Failed to parse report: ${e.message}\n`;
+              }
+            } else {
+              body += '- Report not found in workspace.\n';
+            }
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              body
+            });
